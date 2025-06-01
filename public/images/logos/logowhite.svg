@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="167.03146mm"
+   height="35.519512mm"
+   viewBox="0 0 167.03146 35.519512"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="logowhite.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.724965,-109.43867)">
+    <g
+       id="g5"
+       transform="translate(6.8383886,55.458992)">
+      <text
+         xml:space="preserve"
+         style="font-weight:600;font-size:28.2222px;line-height:0;font-family:Montserrat;-inkscape-font-specification:'Montserrat Semi-Bold';letter-spacing:1.41023px;word-spacing:0px;fill:#ffffff;stroke:#ffffff;stroke-width:0.266965;stroke-linejoin:round;stroke-dashoffset:15.0341"
+         x="58.026131"
+         y="81.617218"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           x="58.026131"
+           y="81.617218"
+           style="font-size:28.2222px;stroke-width:0.266965">ELEVEN</tspan></text>
+      <rect
+         style="fill:#2563eb;fill-opacity:1;stroke:#2563eb;stroke-width:0.266965;stroke-linejoin:round;stroke-dashoffset:15.0341;stroke-opacity:1"
+         id="rect1"
+         width="17.015013"
+         height="35.252548"
+         x="33.186733"
+         y="54.113163"
+         rx="1.1398163" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#rect1"
+         id="use1"
+         transform="translate(-21.166674)"
+         style="fill:#2563eb;fill-opacity:1;stroke:#2563eb;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

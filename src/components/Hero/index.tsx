@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import styles from "./Hero.module.css";
+
 
 export const Hero = () => {
   return (
@@ -17,12 +19,12 @@ export const Hero = () => {
             moderno e resultados reais para o seu negócio.
           </p>
           <div className={styles.ctaButtons}>
-            <a href="#" className={styles.btnPrimary}>
+            <Link href="/start" className={styles.btnPrimary}>
               Começar Projeto
-            </a>
-            <a href="#" className={styles.btnSecondary}>
+            </Link>
+            {/* <a href="#" className={styles.btnSecondary}>
               Ver Portfolio
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

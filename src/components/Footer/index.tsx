@@ -5,7 +5,9 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="space-y-2">
             <h3 className="text-gray-100 mb-2 text-lg">
-              Eleven Web Development
+              <div className="notranslate" translate="no">
+                Eleven Web Development
+              </div>
             </h3>
             <p className="text-gray-400 leading-normal text-sm">
               Criando experiências digitais que transformam negócios desde 2019.
@@ -41,8 +43,9 @@ export const Footer = () => {
             <p className="text-gray-400 leading-normal text-sm">
               contato@elevenwebdev.com.br
             </p>
-            <p className="text-gray-400 leading-normal text-sm">
-              (11) 99999-9999
+            <p className="text-gray-400 leading-normal text-sm flex items-center gap-2">
+             
+              (31) 99836-3024
             </p>
             <p className="text-gray-400 leading-normal text-sm">
               Belo Horizonte, MG
@@ -50,7 +53,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-6 pt-3 text-center text-gray-400 text-sm">
+        <div className="notranslate border-t border-gray-700 mt-6 pt-3 text-center text-gray-400 text-sm">
           <p>
             &copy; 2024 Eleven Web Development. Todos os direitos reservados.
           </p>

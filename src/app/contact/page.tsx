@@ -1,91 +1,197 @@
-import { Metadata } from "next";
+"use client";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Contact Us | Eleven Web Development",
-  description:
-    "Get in touch with us to discuss your project or ask any questions.",
-};
+import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("Resposta do Airtable:", data);
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar mensagem");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Erro:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Header />
-      <main className="min-h-screen">
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-                <form className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+      <main className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 mt-16">
+              Entre em Contato
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Estamos prontos para ajudar você a transformar sua presença
+              digital
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Fale Conosco
+              </h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Send Message
-                  </button>
-                </form>
-              </div>
-              <div>
-                <h2 className="text-2xl font-semibold mb-6">
-                  Contact Information
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-gray-600">
-                    <strong>Email:</strong> contact@elevenwebdev.com
-                  </p>
-                  <p className="text-gray-600">
-                    <strong>Phone:</strong> (11) 99999-9999
-                  </p>
-                  <p className="text-gray-600">
-                    <strong>Address:</strong> São Paulo, SP
-                  </p>
+                    Nome
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                    placeholder="Seu nome completo"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                    placeholder="seu@email.com"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Mensagem
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={4}
+                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                    placeholder="Como podemos ajudar?"
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                  ></textarea>
+                </div>
+
+                {submitStatus === "success" && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-600">
+                    Obrigado! Sua mensagem foi enviada com sucesso.
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">
+                    Ops! Algo deu errado. Por favor, tente novamente.
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                </button>
+              </form>
+            </div>
+
+            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Informações de Contato
+              </h2>
+              <div className="space-y-8">
+                <div className="flex items-start">
+                  <div className="min-w-[60px] w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <Mail className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Email
+                    </h3>
+                    <p className="text-gray-600">contato@elevenwebdev.com.br</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
+                    <Phone size={32} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Telefone
+                    </h3>
+                    <p className="text-gray-600">(31) 99836-3024</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
+                    <MapPin size={32} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      Endereço
+                    </h3>
+                    <p className="text-gray-600">Belo Horizonte, MG</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </>

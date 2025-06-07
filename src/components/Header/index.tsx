@@ -39,20 +39,15 @@ export const Header = () => {
               href="/services"
               className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
             >
-              Services
+              Serviços
             </Link>
             <Link
               href="/about"
               className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
             >
-              About
+              Sobre
             </Link>
-            <Link
-              href="/portfolio"
-              className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
-            >
-              Portfolio
-            </Link>
+
             <Link
               href="/contact"
               className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
@@ -113,13 +108,13 @@ export const Header = () => {
             >
               Sobre
             </Link>
-            <Link
+            {/* <Link
               href="/portfolio"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Portfolio
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"

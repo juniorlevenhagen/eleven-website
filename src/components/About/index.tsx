@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 
 export const poppins = Poppins({
   weight: ["600", "700"],
@@ -26,24 +27,47 @@ export const About = () => {
 
           <div className="flex gap-8 mt-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">100+</div>
-              <div className="text-sm text-gray-500">Projetos Entregues</div>
+              <div className="text-3xl font-bold text-blue-600">+50</div>
+              <div className="text-sm text-gray-500">
+                Projetos Personalizados Finalizados
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">50+</div>
-              <div className="text-sm text-gray-500">Clientes Satisfeitos</div>
+              <div className="text-3xl font-bold text-blue-600">Diversos</div>
+              <div className="text-sm text-gray-500">Setores Atendidos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">5+</div>
-              <div className="text-sm text-gray-500">Anos de Experiência</div>
+              <div className="text-3xl font-bold text-blue-600">100%</div>
+              <div className="text-sm text-gray-500">
+                Focados em Tecnologias Modernas
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl h-[400px] flex items-center justify-center text-white text-lg relative overflow-hidden">
-          {/* Aqui você pode adicionar uma imagem ou conteúdo */}
-          <div className="absolute inset-0 bg-black/10"></div>
-          <span>Imagem ou Conteúdo</span>
+        <div className="bg-white/90 rounded-xl p-6 border border-blue-100 shadow-lg">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="relative w-25 h-25 rounded-full overflow-hidden">
+              <Image
+                src="/images/founder.webp"
+                alt="Founder da Eleven Web Development"
+                fill
+                className="object-cover object-[40%_-30%] scale-170"
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <h3 className="text-slate-900 font-semibold">
+                Júnior Levenhagen
+              </h3>
+              <p className="text-slate-700 text-sm">
+                Founder of Eleven Web Development
+              </p>
+              <p className="text-slate-500 mt-1 italic">
+                &ldquo;Transformamos ideias em experiências digitais
+                extraordinárias.&rdquo;
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

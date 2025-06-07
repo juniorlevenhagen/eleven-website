@@ -25,7 +25,7 @@ export const About = () => {
             entregar projetos de alta qualidade que superam as expectativas.
           </p>
 
-          <div className="flex gap-8 mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">+50</div>
               <div className="text-sm text-gray-500">

@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -52,22 +52,22 @@ export default function ContactPage() {
       <Header />
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 mt-16">
+          <div className="text-center mb-8 md:mb-16">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 mt-8 md:mt-16">
               Entre em Contato
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Estamos prontos para ajudar você a transformar sua presença
               digital
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 px-4">
+            <div className="bg-slate-50 p-6 md:p-10 rounded-xl border border-gray-200">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
                 Fale Conosco
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -148,44 +148,36 @@ export default function ContactPage() {
               </form>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-slate-50 p-6 md:p-10 rounded-xl border border-gray-200">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
                 Informações de Contato
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8">
                 <div className="flex items-start">
-                  <div className="min-w-[60px] w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
-                    <Mail className="w-8 h-8" />
+                  <div className="min-w-[50px] w-[50px] h-[50px] md:min-w-[60px] md:w-[60px] md:h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <Mail className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">
                       Email
                     </h3>
-                    <p className="text-gray-600">contato@elevenwebdev.com.br</p>
+                    <p className="text-sm md:text-base text-gray-600 break-words">
+                      contato@elevenwebdev.com.br
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <Phone size={32} />
+                  <div className="min-w-[50px] w-[50px] h-[50px] md:min-w-[60px] md:w-[60px] md:h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <MapPin className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Telefone
-                    </h3>
-                    <p className="text-gray-600">(31) 99836-3024</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <MapPin size={32} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">
                       Endereço
                     </h3>
-                    <p className="text-gray-600">Belo Horizonte, MG</p>
+                    <p className="text-sm md:text-base text-gray-600">
+                      Belo Horizonte, MG
+                    </p>
                   </div>
                 </div>
               </div>

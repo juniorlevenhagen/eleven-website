@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 
+
 export const poppins = Poppins({
   weight: ["600", "700"],
   subsets: ["latin"],
@@ -52,12 +53,12 @@ export const About = () => {
                 src="/images/founder.webp"
                 alt="Founder da Eleven Web Development"
                 fill
-                className="object-cover object-[40%_-30%] scale-170"
+                className="object-cover object-[40%_-30%] scale-150"
               />
             </div>
             <div className="text-center sm:text-left">
               <h3 className="text-slate-900 font-semibold">
-                Júnior Levenhagen
+                Arthur Levenhagen
               </h3>
               <p className="text-slate-700 text-sm">
                 Founder of Eleven Web Development

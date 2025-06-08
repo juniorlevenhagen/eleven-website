@@ -43,13 +43,6 @@ export const Footer = () => {
             <p className="text-gray-400 leading-normal text-sm">
               contato@elevenwebdev.com.br
             </p>
-            <p className="text-gray-400 leading-normal text-sm flex items-center gap-2">
-             
-              (31) 99836-3024
-            </p>
-            <p className="text-gray-400 leading-normal text-sm">
-              Belo Horizonte, MG
-            </p>
           </div>
         </div>
 

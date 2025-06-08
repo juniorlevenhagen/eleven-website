@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Rocket, ShoppingCart, FileText, Wrench } from "lucide-react";
+import Link from "next/link";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Services | Eleven Web Development",
@@ -77,9 +79,11 @@ export default function ServicesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold mt-auto flex justify-center items-center">
-                A partir de R$ 1.500
-              </div>
+              <Link href="/start" className="block mt-auto">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
+                  A partir de R$ 1.500
+                </div>
+              </Link>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200 flex flex-col h-full">
@@ -133,9 +137,11 @@ export default function ServicesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold mt-auto flex justify-center items-center">
-                A partir de R$ 3.500
-              </div>
+              <Link href="/start" className="block mt-auto">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
+                  A partir de R$ 3.500
+                </div>
+              </Link>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200 flex flex-col h-full">
@@ -189,9 +195,11 @@ export default function ServicesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold mt-auto flex justify-center items-center">
-                A partir de R$ 800
-              </div>
+              <Link href="/start" className="block mt-auto">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
+                  A partir de R$ 800
+                </div>
+              </Link>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200 flex flex-col h-full">
@@ -200,7 +208,7 @@ export default function ServicesPage() {
                   <Wrench size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Manutenção & Suporte
+                  Manutenção
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Mantenha seu site sempre atualizado, seguro e funcionando
@@ -245,13 +253,16 @@ export default function ServicesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold mt-auto flex justify-center items-center">
-                R$ 150/mês
-              </div>
+              <Link href="/start" className="block mt-auto">
+                <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
+                  R$ 150/mês
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </main>
+      <WhatsAppButton />
       <Footer />
     </>
   );

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Lightbulb, Star, Users, BookOpen } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Sobre Nós | Eleven Web Development",
@@ -50,8 +51,8 @@ export default function AboutPage() {
               </h2>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <Lightbulb size={32} />
+                  <div className="w-[60px] h-[60px] min-w-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <Lightbulb className="w-8 h-8" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -63,8 +64,8 @@ export default function AboutPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <Star size={32} />
+                  <div className="w-[60px] h-[60px] min-w-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <Star className="w-8 h-8" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -77,8 +78,8 @@ export default function AboutPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <Users size={32} />
+                  <div className="w-[60px] h-[60px] min-w-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <Users className="w-8 h-8" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -90,8 +91,8 @@ export default function AboutPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-[60px] h-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white text-2xl">
-                    <BookOpen size={32} />
+                  <div className="w-[60px] h-[60px] min-w-[60px] bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl mr-4 flex items-center justify-center text-white">
+                    <BookOpen className="w-8 h-8" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -108,6 +109,7 @@ export default function AboutPage() {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

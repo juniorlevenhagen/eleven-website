@@ -154,8 +154,8 @@ export default function StartPage() {
               {/* Step 2: Features */}
               {currentStep === 2 && (
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
-                  <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                    <Settings className="w-6 h-6 text-blue-600" />
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2 flex flex-col items-center gap-3">
+                    <Settings className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
                     Quais funcionalidades você precisa?
                   </h2>
                   <p className="text-slate-300 mb-6">
@@ -178,8 +178,8 @@ export default function StartPage() {
               {/* Step 3: Extras */}
               {currentStep === 3 && (
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
-                  <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                    <Rocket className="w-6 h-6 text-blue-600" />
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2 flex flex-col items-center gap-3">
+                    <Rocket className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
                     Recursos extras e integrações
                   </h2>
                   <p className="text-slate-300 mb-6">

@@ -5,9 +5,9 @@ import { Lightbulb, Star, Users, BookOpen } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Sobre Nós | Eleven Web Development",
+  title: "Sobre a Eleven Web Development | Nossa História",
   description:
-    "Conheça a Eleven Web Development, nossa história, missão e valores.",
+    "Conheça a Eleven Web Development, nossa missão de transformar ideias em experiências digitais extraordinárias desde 2020.",
 };
 
 export default function AboutPage() {

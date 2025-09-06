@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nosso Processo | Eleven Web Development",
+  title: "Como Trabalhamos | Metodologia Eleven Web Development",
   description:
-    "Conheça nossa metodologia de desenvolvimento web, desde o planejamento até o lançamento.",
+    "Conheça nossa metodologia de desenvolvimento web em 6 etapas: planejamento, design, desenvolvimento, testes, lançamento e suporte.",
 };
 
 const processSteps = [

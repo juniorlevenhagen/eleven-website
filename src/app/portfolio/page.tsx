@@ -3,9 +3,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Eleven Web Development",
+  title: "Portfolio de Projetos | Eleven Web Development",
   description:
-    "Explore our successful web development projects and case studies.",
+    "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
 };
 
 export default function PortfolioPage() {

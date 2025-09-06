@@ -13,9 +13,9 @@ import Link from "next/link";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Services | Eleven Web Development",
+  title: "Serviços de Desenvolvimento Web | Eleven Web Development",
   description:
-    "Discover our web development services, including corporate websites, e-commerce, landing pages, and maintenance.",
+    "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
 };
 
 const packages = [
@@ -175,7 +175,7 @@ export default function ServicesPage() {
               Serviços Adicionais
             </h2>
             <p className="text-gray-600">
-              Complemente seu pacote com serviços extras  
+              Complemente seu pacote com serviços extras
             </p>
           </div>
 

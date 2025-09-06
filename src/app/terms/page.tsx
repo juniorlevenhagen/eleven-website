@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Termos de Uso | Eleven Web Development",
   description:
-    "Termos e condições de uso dos serviços da Eleven Web Development.",
+    "Termos e condições de uso dos serviços da Eleven Web Development. Conheça nossos compromissos e responsabilidades.",
 };
 
 export default function TermsPage() {
@@ -141,7 +141,7 @@ export default function TermsPage() {
                 conosco através de:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
-                <li>Email: contato@elevenweb.com.br</li>
+                <li>Email: contato@elevenwebdev.com.br</li>
               </ul>
             </section>
           </div>

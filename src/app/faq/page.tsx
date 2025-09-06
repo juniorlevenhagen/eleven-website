@@ -6,9 +6,9 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "FAQ | Eleven Web Development",
+  title: "Perguntas Frequentes | Eleven Web Development",
   description:
-    "Perguntas frequentes sobre nossos serviços de desenvolvimento web.",
+    "Tire suas dúvidas sobre nossos serviços de desenvolvimento web, prazos, preços, suporte e muito mais.",
 };
 
 const faqs = [

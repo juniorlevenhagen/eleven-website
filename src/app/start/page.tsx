@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Target, Settings, Rocket } from "lucide-react";
 import {
@@ -10,6 +11,12 @@ import {
   NavigationButtons,
   ContactForm,
 } from "@/components/Start";
+
+export const metadata: Metadata = {
+  title: "Configure seu Projeto | Eleven Web Development",
+  description:
+    "Configure seu projeto ideal selecionando funcionalidades e recursos. Receba um orçamento personalizado para seu site.",
+};
 
 interface SelectedOptions {
   siteType: string | null;
@@ -129,16 +136,16 @@ export default function StartPage() {
 
               {/* Step 1: Site Type */}
               {currentStep === 1 && (
-                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 sm:p-8">
-                  <h2 className="text-xl sm:text-2xl font-bold mb-2 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-blue-600" />
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2 flex flex-col items-center gap-3">
+                    <Target className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
                     Que tipo de site você precisa?
                   </h2>
-                  <p className="text-slate-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                  <p className="text-slate-300 mb-6 text-center">
                     Escolha a opção que melhor descreve seu projeto principal
                   </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {Object.entries(siteTypes).map(([key, label]) => (
                       <OptionCard
                         key={key}
@@ -158,7 +165,7 @@ export default function StartPage() {
                     <Settings className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
                     Quais funcionalidades você precisa?
                   </h2>
-                  <p className="text-slate-300 mb-6">
+                  <p className="text-slate-300 mb-6 text-center">
                     Marque todas as opções que se aplicam ao seu projeto
                   </p>
 
@@ -182,7 +189,7 @@ export default function StartPage() {
                     <Rocket className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
                     Recursos extras e integrações
                   </h2>
-                  <p className="text-slate-300 mb-6">
+                  <p className="text-slate-300 mb-6 text-center">
                     Funcionalidades avançadas para potencializar seu site
                   </p>
 

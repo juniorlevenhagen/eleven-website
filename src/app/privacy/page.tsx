@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Política de Privacidade | Eleven Web Development",
   description:
-    "Política de privacidade e proteção de dados da Eleven Web Development.",
+    "Política de privacidade e proteção de dados da Eleven Web Development. Saiba como protegemos suas informações.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
                 contato conosco através de:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
-                <li>Email: contato@elevenweb.com.br</li>
+                <li>Email: contato@elevenwebdev.com.br</li>
               </ul>
             </section>
           </div>

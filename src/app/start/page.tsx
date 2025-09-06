@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Target, Settings, Rocket } from "lucide-react";
 import {
@@ -11,12 +10,6 @@ import {
   NavigationButtons,
   ContactForm,
 } from "@/components/Start";
-
-export const metadata: Metadata = {
-  title: "Configure seu Projeto | Eleven Web Development",
-  description:
-    "Configure seu projeto ideal selecionando funcionalidades e recursos. Receba um orçamento personalizado para seu site.",
-};
 
 interface SelectedOptions {
   siteType: string | null;

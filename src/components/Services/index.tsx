@@ -10,9 +10,15 @@ export const Services = () => {
   return (
     <section className="py-16 px-8 bg-white" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 id="services-heading" className="text-gray-500 mb-12 text-4xl">
-          Soluções completas em desenvolvimento web para levar seu negócio ao
-          próximo nível
+        <h2
+          id="services-heading"
+          className="text-gray-500 mb-12 text-2xl sm:text-3xl lg:text-4xl max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto leading-tight px-4"
+        >
+          <span className="block sm:inline">Soluções completas em</span>
+          <span className="block sm:inline"> desenvolvimento web</span>
+          <br className="hidden sm:block" />
+          <span className="block sm:inline">para levar seu negócio</span>
+          <span className="block sm:inline"> ao próximo nível</span>
         </h2>
 
         <div

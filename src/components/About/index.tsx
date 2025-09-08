@@ -112,7 +112,7 @@ export const About = () => {
 
           {/* Right Column - Founder Section */}
           <section
-            className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl p-8 shadow-xl text-white relative overflow-hidden"
+            className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl p-12 shadow-xl text-white relative overflow-hidden mt-12"
             aria-labelledby="founder-heading"
           >
             {/* Background Pattern */}

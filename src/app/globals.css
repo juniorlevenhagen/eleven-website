@@ -62,6 +62,24 @@ body {
   outline: none;
 }
 
+/* Remove outline from navigation links completely */
+header nav a:focus,
+header nav a:active,
+header nav a:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure mobile menu links are clickable */
+#mobile-menu a {
+  display: block !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+  position: relative !important;
+  text-decoration: none !important;
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   :root {
@@ -187,11 +205,16 @@ header nav a {
   color: #1f2937;
   text-decoration: none;
   transition: color 0.2s ease;
+  outline: none;
 }
 
 header nav a:hover {
   color: #2563eb;
   text-decoration: none;
+}
+
+header nav a:focus {
+  outline: none;
 }
 
 /* Footer navigation links */

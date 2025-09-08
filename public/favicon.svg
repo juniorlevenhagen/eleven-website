@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo branco -->
+  <rect width="32" height="32" rx="6" fill="white"/>
+  
+  <!-- Duas barras representando "11" -->
+  <rect x="6" y="6" width="8" height="20" rx="4" fill="#1774c9"/>
+  <rect x="18" y="6" width="8" height="20" rx="4" fill="#1774c9"/>
+</svg>

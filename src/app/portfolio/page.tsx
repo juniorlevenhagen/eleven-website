@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: "Portfolio de Projetos | Eleven Web Development",
   description:
     "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
+  keywords: [
+    "portfolio",
+    "projetos web",
+    "cases de sucesso",
+    "sites desenvolvidos",
+    "trabalhos realizados",
+    "exemplos de sites",
+  ],
+  openGraph: {
+    title: "Portfolio de Projetos | Eleven Web Development",
+    description:
+      "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
+    url: "https://elevenweb.dev/portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio de Projetos | Eleven Web Development",
+    description:
+      "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
+  },
 };
 
 export default function PortfolioPage() {

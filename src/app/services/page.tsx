@@ -16,6 +16,28 @@ export const metadata: Metadata = {
   title: "Serviços de Desenvolvimento Web | Eleven Web Development",
   description:
     "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
+  keywords: [
+    "desenvolvimento web",
+    "sites institucionais",
+    "e-commerce",
+    "landing page",
+    "manutenção de sites",
+    "pacotes de desenvolvimento",
+    "sites profissionais",
+  ],
+  openGraph: {
+    title: "Serviços de Desenvolvimento Web | Eleven Web Development",
+    description:
+      "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
+    url: "https://elevenweb.dev/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Serviços de Desenvolvimento Web | Eleven Web Development",
+    description:
+      "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
+  },
 };
 
 const packages = [

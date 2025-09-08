@@ -25,12 +25,16 @@ const siteMap = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo e Descrição */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-4">
+            <Link
+              href="/"
+              className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md"
+              aria-label="Eleven Web Development - Página inicial"
+            >
               <Image
                 src={ASSETS.LOGOS.LIGHT}
                 alt="Eleven Web Development"
@@ -49,21 +53,31 @@ export const Footer = () => {
 
           {/* Mapa do Site */}
           {Object.entries(siteMap).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-white font-semibold mb-4">{category}</h3>
-              <ul className="space-y-2">
+            <nav
+              key={category}
+              aria-labelledby={`footer-${category
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
+            >
+              <h3
+                id={`footer-${category.toLowerCase().replace(/\s+/g, "-")}`}
+                className="text-white font-semibold mb-4"
+              >
+                {category}
+              </h3>
+              <ul className="space-y-2" role="list">
                 {links.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} role="listitem">
                     <Link
                       href={link.href}
-                      className="text-sm hover:text-white transition-colors"
+                      className="text-sm hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
                     >
                       {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
         </div>
 

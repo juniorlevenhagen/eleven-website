@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 mt-16">
@@ -26,7 +26,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
+            <div className="bg-white p-10 rounded-xl border border-gray-200">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Nossa História
               </h2>
@@ -45,7 +45,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-xl border border-gray-200">
+            <div className="bg-white p-10 rounded-xl border border-gray-200">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Nossos Valores
               </h2>

@@ -152,8 +152,11 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <Link href="/start" className="block mt-auto">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
-                    Solicitar Orçamento Personalizado
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors text-md sm:text-base">
+                    <span className="hidden sm:inline">
+                      Solicitar Orçamento Personalizado
+                    </span>
+                    <span className="sm:hidden">Solicitar Orçamento</span>
                   </div>
                 </Link>
               </div>
@@ -206,7 +209,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <Link href="/start" className="block mt-auto">
-                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors">
+                  <div className="bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold flex justify-center items-center hover:bg-blue-700 transition-colors text-md sm:text-base">
                     Adicionar Serviço
                   </div>
                 </Link>

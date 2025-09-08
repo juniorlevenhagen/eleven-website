@@ -162,7 +162,7 @@ export default function ContactPage() {
                       Email
                     </h3>
                     <p className="text-sm md:text-base text-gray-600 break-words">
-                      contato@elevenwebdev.com.br
+                      contato@elevenweb.dev
                     </p>
                   </div>
                 </div>

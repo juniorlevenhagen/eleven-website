@@ -1,9 +1,14 @@
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
+  const message =
+    "Olá! Estou no site da Eleven e preciso de informações sobre os serviços de desenvolvimento web.";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/5531998363024?text=${encodedMessage}`;
+
   return (
     <a
-      href="https://wa.me/5531998363024"
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50 flex items-center gap-2 group"

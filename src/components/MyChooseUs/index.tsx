@@ -37,9 +37,12 @@ export const WhyChooseUs = () => {
         <header className="text-center mb-12">
           <h2
             id="why-choose-heading"
-            className="text-3xl font-bold text-gray-900 mb-4"
+            className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4"
           >
-            Por que escolher a Eleven?
+            Por que escolher a{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              Eleven?
+            </span>
           </h2>
           <p className="text-xl text-gray-600">
             Compromisso com qualidade e resultados

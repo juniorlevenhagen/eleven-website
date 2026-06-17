@@ -1,36 +1,38 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import styles from "./Hero.module.css";
+import Link from 'next/link';
+import styles from './Hero.module.css';
 
 export const Hero = () => {
   return (
-    <section
-      className="relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] py-4 px-4 sm:px-6 lg:px-8 text-center overflow-hidden flex items-center"
-      aria-labelledby="hero-title"
-    >
-      <div className={styles["hero-mockup"]}>
-        <div
-          className={`${styles["floating-element"]} ${styles["float1"]}`}
-          aria-hidden="true"
-        />
-        <div
-          className={`${styles["floating-element"]} ${styles["float2"]}`}
-          aria-hidden="true"
-        />
-        <div
-          className={`${styles["floating-element"]} ${styles["float3"]}`}
-          aria-hidden="true"
-        />
+    <section className={styles['hero-section']} aria-labelledby="hero-title">
+      {/* Imagem de fundo */}
+      <div className={styles['hero-bg']} aria-hidden="true" />
 
-        <div className={styles["hero-content"]}>
-          <h1 id="hero-title" className={styles["hero-title"]}>
-            Criamos Sites que Convertem
+      {/* Overlay gradiente para legibilidade */}
+      <div className={styles['hero-overlay']} aria-hidden="true" />
+
+      <div className={styles['hero-mockup']}>
+        <div className={styles['hero-content']}>
+          {/* Eyebrow */}
+          <div className={styles['hero-eyebrow']} aria-hidden="true">
+            <span className={styles['eyebrow-dot']} />
+            Desenvolvimento Web Profissional
+          </div>
+
+          <h1 id="hero-title" className={styles['hero-title']}>
+            Presença digital{' '}
+            <span>
+              {' '}
+              transmite credibilidade.
+            </span>
           </h1>
-          <p className={styles["hero-subtitle"]}>
-            Desenvolvimento web profissional com foco em performance, design
-            moderno e resultados reais para o seu negócio.
+
+          <p className={styles['hero-subtitle']}>
+            Sites e lojas virtuais feitos para converter visitas em clientes —
+            com design moderno, código limpo e entrega ágil.
           </p>
+
           <div
             className={styles.ctaButtons}
             role="group"
@@ -41,10 +43,35 @@ export const Hero = () => {
               className={`${styles.btnPrimary} focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-800`}
             >
               Começar Projeto
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
-            {/* <a href="#" className={styles.btnSecondary}>
-              Ver Portfolio
-            </a> */}
+            <a href="/services" className={styles.btnSecondary}>
+              Ver Serviços
+            </a>
+          </div>
+
+          {/* Social proof */}
+          <div className={styles['hero-proof']}>
+            <div className={styles['proof-avatars']} aria-hidden="true">
+              {['CM', 'RP', 'FO', 'JL'].map((initials) => (
+                <div key={initials} className={styles['proof-avatar']}>
+                  {initials}
+                </div>
+              ))}
+            </div>
+            <p className={styles['proof-text']}>
+              <strong>+50 clientes</strong> satisfeitos em 15 setores
+            </p>
           </div>
         </div>
       </div>

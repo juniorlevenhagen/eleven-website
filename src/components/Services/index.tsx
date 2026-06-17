@@ -12,13 +12,15 @@ export const Services = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2
           id="services-heading"
-          className="text-gray-500 mb-12 text-2xl sm:text-3xl lg:text-4xl max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto leading-tight px-4"
+          className="mb-12 text-3xl sm:text-4xl lg:text-5xl max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto leading-tight px-4 font-bold text-slate-900"
         >
-          <span className="block sm:inline">Soluções completas em</span>
-          <span className="block sm:inline"> desenvolvimento web</span>
+          <span className="block sm:inline">Soluções completas em </span>
+          <span className="block sm:inline bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            desenvolvimento web
+          </span>
           <br className="hidden sm:block" />
-          <span className="block sm:inline">para levar seu negócio</span>
-          <span className="block sm:inline"> ao próximo nível</span>
+          <span className="block sm:inline"> para levar seu negócio </span>
+          <span className="block sm:inline">ao próximo nível</span>
         </h2>
 
         <div

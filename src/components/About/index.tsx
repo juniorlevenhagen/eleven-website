@@ -29,7 +29,7 @@ export const About = () => {
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Transformando ideias em experiências digitais extraordinárias desde
             2020. Nossa jornada é marcada por inovação, excelência e compromisso
-            com resultados.
+            com resultados
           </p>
         </header>
 

@@ -83,7 +83,7 @@ export default function ContactPage() {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Nome{" "}
+                    Nome{' '}
                     <span className="text-red-500" aria-label="obrigatório">
                       *
                     </span>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Email{" "}
+                    Email{' '}
                     <span className="text-red-500" aria-label="obrigatório">
                       *
                     </span>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Mensagem{" "}
+                    Mensagem{' '}
                     <span className="text-red-500" aria-label="obrigatório">
                       *
                     </span>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                   ></div>
                 </div>
 
-                {submitStatus === "success" && (
+                {submitStatus === 'success' && (
                   <div
                     className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-600"
                     role="alert"
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                {submitStatus === "error" && (
+                {submitStatus === 'error' && (
                   <div
                     className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600"
                     role="alert"
@@ -199,10 +199,10 @@ export default function ContactPage() {
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   aria-describedby={
-                    isSubmitting ? "submitting-status" : undefined
+                    isSubmitting ? 'submitting-status' : undefined
                   }
                 >
-                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                  {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
                 </button>
                 {isSubmitting && (
                   <div
@@ -240,10 +240,10 @@ export default function ContactPage() {
                     </h3>
                     <p className="text-sm md:text-base text-gray-600 break-words">
                       <a
-                        href="mailto:contato@elevenweb.dev"
+                        href="mailto:contato.elevenweb@gmail.com"
                         className="hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-1 py-1"
                       >
-                        contato@elevenweb.dev
+                        Enviar E-mail
                       </a>
                     </p>
                   </div>

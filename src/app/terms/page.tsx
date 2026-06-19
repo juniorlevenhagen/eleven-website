@@ -141,7 +141,7 @@ export default function TermsPage() {
                 conosco através de:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
-                <li>Email: contato@elevenweb.dev</li>
+                <li>Email: contato.elevenweb@gmail.com</li>
               </ul>
             </section>
           </div>

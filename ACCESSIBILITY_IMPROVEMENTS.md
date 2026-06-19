@@ -130,7 +130,7 @@ Este documento descreve as melhorias de acessibilidade implementadas no site da 
 
 Para reportar problemas de acessibilidade ou sugerir melhorias, entre em contato:
 
-- **Email**: contato@elevenweb.dev
+- **Email**: contato.elevenweb@gmail.com
 - **WhatsApp**: [Link do WhatsApp]
 
 ---

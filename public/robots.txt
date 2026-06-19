@@ -1,20 +1,26 @@
-User-agent: *
-Allow: /
+import { MetadataRoute } from 'next';
+ 
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://elevenweb.dev';
+  
+  // Lista de todas as rotas comerciais que você definiu no seu robots
+  const routes = [
+    '',
+    '/services',
+    '/about',
+    '/portfolio',
+    '/process',
+    '/contact',
+    '/start',
+    '/faq',
+    '/terms',
+    '/privacy'
+  ];
 
-# Sitemap
-Sitemap: https://elevenweb.dev/sitemap.xml
-
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /api/
-
-# Allow all other content
-Allow: /services
-Allow: /about
-Allow: /portfolio
-Allow: /process
-Allow: /contact
-Allow: /start
-Allow: /faq
-Allow: /terms
-Allow: /privacy
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === '' || route === '/portfolio' ? 'weekly' : 'monthly', // Home e portfólio mudam mais vezes
+    priority: route === '' ? 1.0 : route === '/contact' || route === '/start' ? 0.9 : 0.7, // Prioridade de importância para o Google
+  }));
+}

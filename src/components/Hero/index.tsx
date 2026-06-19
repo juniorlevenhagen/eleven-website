@@ -20,12 +20,10 @@ export const Hero = () => {
             Desenvolvimento Web Profissional
           </div>
 
+          {/* H1 Otimizado para SEO (Mantendo o span para estilização CSS) */}
           <h1 id="hero-title" className={styles['hero-title']}>
-            Presença digital{' '}
-            <span>
-              {' '}
-              transmite credibilidade.
-            </span>
+            Criação de sites profissionais que{' '}
+            <span> transmitem credibilidade.</span>
           </h1>
 
           <p className={styles['hero-subtitle']}>
@@ -55,9 +53,11 @@ export const Hero = () => {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
-            <a href="/services" className={styles.btnSecondary}>
+
+            {/* Alterado de <a> para <Link> para prefetching nativo do Next.js */}
+            <Link href="/services" className={styles.btnSecondary}>
               Ver Serviços
-            </a>
+            </Link>
           </div>
 
           {/* Social proof */}

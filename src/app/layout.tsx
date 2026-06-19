@@ -1,71 +1,76 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: "Eleven Web Development - Criação de Sites Profissionais",
+  // 1. Resolve o aviso do Next.js Build definitivamente
+  metadataBase: new URL('https://elevenweb.dev'),
+
+  title: 'Eleven Web Development - Criação de Sites Profissionais',
   description:
-    "Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.",
+    'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
   keywords: [
-    "desenvolvimento web",
-    "criação de sites",
-    "sites profissionais",
-    "e-commerce",
-    "landing page",
-    "SEO",
-    "design responsivo",
-    "programação web",
+    'desenvolvimento web',
+    'criação de sites',
+    'sites profissionais',
+    'e-commerce',
+    'landing page',
+    'SEO',
+    'design responsivo',
+    'programação web',
   ],
-  authors: [{ name: "Eleven Web Development" }],
-  creator: "Eleven Web Development",
-  publisher: "Eleven Web Development",
+  authors: [{ name: 'Eleven Web Development' }],
+  creator: 'Eleven Web Development',
+  publisher: 'Eleven Web Development',
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://elevenweb.dev",
-    siteName: "Eleven Web Development",
-    title: "Eleven Web Development - Criação de Sites Profissionais",
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://elevenweb.dev',
+    siteName: 'Eleven Web Development',
+    title: 'Eleven Web Development - Criação de Sites Profissionais',
     description:
-      "Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.",
+      'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
     images: [
       {
-        url: "/images/logos/logo.svg",
+        // 2. Ajustado para usar a og-image.png que você salvou na public
+        url: '/images/logos/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Eleven Web Development - Logo",
+        alt: 'Eleven Web Development - Criação de Sites Profissionais',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Eleven Web Development - Criação de Sites Profissionais",
+    card: 'summary_large_image',
+    title: 'Eleven Web Development - Criação de Sites Profissionais',
     description:
-      "Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.",
-    images: ["/images/logos/logo.svg"],
+      'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
+    // 3. Ajustado aqui também para a og-image.png
+    images: ['/images/logos/og-image.png'],
   },
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: '/apple-touch-icon.png',
   },
 };
 

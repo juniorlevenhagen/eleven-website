@@ -83,10 +83,11 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true, record: data }, { headers });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Erro no processamento do post:', error);
+    const message = error instanceof Error ? error.message : 'Erro desconhecido';
     return NextResponse.json(
-      { error: 'Erro ao processar a requisição', details: error.message },
+      { error: 'Erro ao processar a requisição', details: message },
       { status: 500, headers },
     );
   }

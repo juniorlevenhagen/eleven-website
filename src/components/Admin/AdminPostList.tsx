@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Eye, PlusCircle, CheckCircle, HelpCircle, Archive, Edit } from 'lucide-react';
+import { Search, Eye, CheckCircle, HelpCircle, Archive } from 'lucide-react';
 
 interface AdminPost {
   id: string;

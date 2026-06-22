@@ -7,6 +7,7 @@ const siteMap = {
     { name: "Home", href: "/" },
     { name: "Serviços", href: "/services" },
     { name: "Sobre", href: "/about" },
+    { name: "Blog", href: "/blog" },
     { name: "Contato", href: "/contact" },
   ],
   Informações: [

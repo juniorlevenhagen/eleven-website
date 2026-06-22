@@ -48,6 +48,12 @@ export const Header = () => {
               Sobre
             </Link>
             <Link
+              href="/blog"
+              className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
               href="/contact"
               className="text-[#1f2937] hover:text-blue-600 font-medium transition-colors"
             >
@@ -106,6 +112,13 @@ export const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Sobre
+            </Link>
+            <Link
+              href="/blog"
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/contact"

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '', changeFreq: 'weekly' as const, priority: 1.0 },
     { path: '/services', changeFreq: 'monthly' as const, priority: 0.9 },
     { path: '/about', changeFreq: 'monthly' as const, priority: 0.8 },
+    { path: '/blog', changeFreq: 'weekly' as const, priority: 0.8 },
     { path: '/portfolio', changeFreq: 'weekly' as const, priority: 0.8 }, // Mudei para weekly porque portfólio costuma atualizar mais
     { path: '/process', changeFreq: 'monthly' as const, priority: 0.7 },
     { path: '/contact', changeFreq: 'monthly' as const, priority: 0.7 },

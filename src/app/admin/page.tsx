@@ -24,7 +24,11 @@ async function getAllBlogPostsForAdmin() {
       const title = (fields.Title || fields.title || 'Sem título') as string;
       const status = (fields.Status || fields.status || 'Draft') as string;
       const category = (fields.Category || fields.category || (fields.Tags && Array.isArray(fields.Tags) && fields.Tags[0]) || 'Desenvolvimento Web') as string;
-      const author = (fields.Author || fields.author || 'Equipe Eleven') as string;
+      const author = (fields.Author || fields.author || 'Equipe Eleven') as string; // Ainda não está sendo usado
+      const keyTakeaways = (fields.Takeaways ||
+        fields.takeaways ||
+        '') as string;
+
       
       const rawDate = (fields.PublishedAt || fields['Published At'] || fields['Publish Date'] || fields.published_at || fields.publish_date) as string;
       
@@ -74,6 +78,7 @@ async function getAllBlogPostsForAdmin() {
         author,
         date,
         slug,
+        keyTakeaways,
       };
     });
   } catch (error) {

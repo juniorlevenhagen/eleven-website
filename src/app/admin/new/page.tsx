@@ -3,7 +3,14 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Send, Sparkles, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
+import {
+  ArrowLeft,
+  Send,
+  Sparkles,
+  AlertCircle,
+  CheckCircle2,
+  Loader2,
+} from 'lucide-react';
 
 export default function NewPostPage() {
   const router = useRouter();
@@ -18,10 +25,13 @@ export default function NewPostPage() {
     estimatedread: '5',
     status: 'Draft',
     publishdate: '',
+    keyTakeaways: '', // Mantido o campo no estado inicial
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
   // Gera o slug (permalink) automaticamente a partir do título
@@ -39,7 +49,11 @@ export default function NewPostPage() {
     }
   }, [formData.title]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -80,7 +94,10 @@ export default function NewPostPage() {
           featuredimage: formData.featuredimage || undefined,
           estimatedread: Number(formData.estimatedread),
           status: formData.status,
-          publishdate: formData.publishdate || new Date().toISOString().split('T')[0],
+          publishdate:
+            formData.publishdate || new Date().toISOString().split('T')[0],
+          // 🔴 ATUALIZAÇÃO 1: Enviando o campo keyTakeaways para a API do Next.js
+          keyTakeaways: formData.keyTakeaways,
         }),
       });
 
@@ -97,7 +114,10 @@ export default function NewPostPage() {
       }, 2000);
     } catch (err: unknown) {
       console.error(err);
-      const message = err instanceof Error ? err.message : 'Houve um erro de rede ou servidor ao cadastrar o post.';
+      const message =
+        err instanceof Error
+          ? err.message
+          : 'Houve um erro de rede ou servidor ao cadastrar o post.';
       setErrorMessage(message);
       setSubmitStatus('error');
     } finally {
@@ -127,17 +147,20 @@ export default function NewPostPage() {
             Escrever Novo Post
           </h1>
           <p className="mt-2 text-sm text-gray-400">
-            Publique novos conteúdos e insira no Airtable diretamente pelo painel do site.
+            Publique novos conteúdos e insira no Airtable diretamente pelo
+            painel do site.
           </p>
         </header>
 
         {/* Formulário */}
         <main className="bg-black/20 backdrop-blur-md border border-white/5 rounded-3xl p-6 sm:p-10 shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-6">
-            
             {/* Título */}
             <div>
-              <label htmlFor="title" className="block text-sm font-semibold text-gray-300 mb-2">
+              <label
+                htmlFor="title"
+                className="block text-sm font-semibold text-gray-300 mb-2"
+              >
                 Título do Artigo <span className="text-red-500">*</span>
               </label>
               <input
@@ -155,7 +178,10 @@ export default function NewPostPage() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {/* Slug / Link */}
               <div>
-                <label htmlFor="permalink" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="permalink"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Slug / URL Amigável
                 </label>
                 <div className="relative">
@@ -174,7 +200,10 @@ export default function NewPostPage() {
 
               {/* Autor */}
               <div>
-                <label htmlFor="author" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="author"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Autor
                 </label>
                 <input
@@ -190,7 +219,10 @@ export default function NewPostPage() {
 
               {/* Categoria */}
               <div>
-                <label htmlFor="category" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="category"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Categoria
                 </label>
                 <select
@@ -213,7 +245,10 @@ export default function NewPostPage() {
 
               {/* Tempo de Leitura */}
               <div>
-                <label htmlFor="estimatedread" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="estimatedread"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Tempo de Leitura (minutos)
                 </label>
                 <input
@@ -231,7 +266,10 @@ export default function NewPostPage() {
 
             {/* Link Imagem de Destaque */}
             <div>
-              <label htmlFor="featuredimage" className="block text-sm font-semibold text-gray-300 mb-2">
+              <label
+                htmlFor="featuredimage"
+                className="block text-sm font-semibold text-gray-300 mb-2"
+              >
                 URL da Imagem de Destaque
               </label>
               <input
@@ -244,13 +282,17 @@ export default function NewPostPage() {
                 className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition font-mono text-xs"
               />
               <p className="mt-1.5 text-xs text-gray-500">
-                Insira o link de uma imagem pública do Unsplash ou do próprio repositório de mídias.
+                Insira o link de uma imagem pública do Unsplash ou do próprio
+                repositório de mídias.
               </p>
             </div>
 
             {/* Resumo / Excerpt */}
             <div>
-              <label htmlFor="summary" className="block text-sm font-semibold text-gray-300 mb-2">
+              <label
+                htmlFor="summary"
+                className="block text-sm font-semibold text-gray-300 mb-2"
+              >
                 Resumo / Subtítulo
               </label>
               <textarea
@@ -264,10 +306,33 @@ export default function NewPostPage() {
               />
             </div>
 
+            {/* 🔴 ATUALIZAÇÃO 2: Novo Input para Key Takeaways adicionado aqui */}
+            <div>
+              <label
+                htmlFor="keyTakeaways"
+                className="block text-sm font-semibold text-gray-300 mb-2"
+              >
+                Principais Aprendizados / Key Takeaways
+              </label>
+              <textarea
+                id="keyTakeaways"
+                name="keyTakeaways"
+                rows={3}
+                value={formData.keyTakeaways}
+                onChange={handleChange}
+                placeholder="Destaque aqui os pontos mais importantes que o leitor aprenderá neste artigo..."
+                className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition resize-none"
+              />
+            </div>
+
             {/* Conteúdo do Artigo */}
             <div>
-              <label htmlFor="content" className="block text-sm font-semibold text-gray-300 mb-2">
-                Conteúdo do Artigo <span className="text-red-500">*</span> (Markdown suportado)
+              <label
+                htmlFor="content"
+                className="block text-sm font-semibold text-gray-300 mb-2"
+              >
+                Conteúdo do Artigo <span className="text-red-500">*</span>{' '}
+                (Markdown suportado)
               </label>
               <textarea
                 id="content"
@@ -284,7 +349,10 @@ export default function NewPostPage() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 border-t border-white/5 pt-6">
               {/* Status */}
               <div>
-                <label htmlFor="status" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="status"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Status
                 </label>
                 <select
@@ -295,13 +363,18 @@ export default function NewPostPage() {
                   className="w-full rounded-xl bg-slate-900 px-4 py-3 text-sm text-white border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition"
                 >
                   <option value="Draft">Draft (Rascunho)</option>
-                  <option value="Published">Published (Publicado imediatamente)</option>
+                  <option value="Published">
+                    Published (Publicado imediatamente)
+                  </option>
                 </select>
               </div>
 
               {/* Data de Publicação */}
               <div>
-                <label htmlFor="publishdate" className="block text-sm font-semibold text-gray-300 mb-2">
+                <label
+                  htmlFor="publishdate"
+                  className="block text-sm font-semibold text-gray-300 mb-2"
+                >
                   Data de Publicação
                 </label>
                 <input
@@ -319,7 +392,9 @@ export default function NewPostPage() {
             {submitStatus === 'success' && (
               <div className="flex items-center gap-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-4 text-emerald-400 text-sm">
                 <CheckCircle2 className="h-5 w-5 shrink-0" />
-                <span>Post cadastrado com sucesso! Redirecionando para o painel...</span>
+                <span>
+                  Post cadastrado com sucesso! Redirecionando para o painel...
+                </span>
               </div>
             )}
 

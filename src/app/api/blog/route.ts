@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       featuredimage,
       permalink,
       estimatedread,
+      keyTakeaways,
     } = body;
 
     const apiKey = process.env.AIRTABLE_API_KEY;
@@ -52,6 +53,7 @@ export async function POST(req: NextRequest) {
         fldQlVF6m1bcvcVc2: publishdate ? new Date(publishdate).toISOString() : undefined,
         fldnkiKhlrvGr0fnT: permalink || '',
         fldR7UmYQTnN9uXzY: estimatedread ? Number(estimatedread) : 5,
+        fldYBt1g8ivh34mep: keyTakeaways || '',
         // Campo de anexo do Airtable precisa ser um array de objetos com o link da imagem
         fldQLbDq2RN6Mi7mI: featuredimage ? [{ url: featuredimage }] : undefined,
       },

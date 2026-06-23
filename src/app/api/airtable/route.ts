@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     console.log("Dados recebidos na API:", body);
 
-    const { name, email, phone, selectedOptions} = body;
+    const { name, email, phone, keyTakeaways, selectedOptions} = body;
 
     // Log para debug das variáveis de ambiente
     console.log("Verificando variáveis de ambiente:", {
@@ -48,6 +48,7 @@ export async function POST(req: NextRequest) {
         fldtzqUj0EZV5uRST: selectedOptions.siteType,
         fldztPbU0cZM96ZWs: selectedOptions.features,
         fldLVGfokCu0OHlUp: selectedOptions.extras,
+        fldYBt1g8ivh34mep: keyTakeaways,
       },
     };
 

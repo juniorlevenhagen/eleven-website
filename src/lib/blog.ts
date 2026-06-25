@@ -295,8 +295,10 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
   // Cover image: string ou primeiro anexo
   // 📸 Busca blindada para a Imagem de Destaque
   // 📸 Busca profunda e tipada para a Imagem de Destaque
+  // 📸 Agora com "featuredimage" incluído na fila de busca!
   let coverImage = getStringField(
     fields,
+    'featuredimage',
     'featuredImage',
     'Featured Image',
     'featured_image',
@@ -304,8 +306,10 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
   );
 
   if (!coverImage) {
+    // Adicionado aqui também para o caso do Airtable converter o anexo
     const attachments = getField(
       fields,
+      'featuredimage',
       'featuredImage',
       'Featured Image',
       'featured_image',
@@ -313,7 +317,6 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
     if (Array.isArray(attachments) && attachments.length > 0) {
       const first = attachments[0];
       if (first && typeof first === 'object' && 'url' in first) {
-        // Tipagem segura para mapear as possíveis estruturas do Airtable sem usar 'any'
         const attachmentObj = first as Record<string, unknown>;
         const thumbnails = attachmentObj.thumbnails as
           | Record<string, Record<string, string>>

@@ -21,8 +21,12 @@ export async function generateMetadata({
   const post = await getBlogPostBySlug(slug);
 
   if (!post) {
-    return { title: "Artigo não encontrado" };
+    return { title: 'Artigo não encontrado' };
   }
+
+  // Define uma imagem padrão do seu site caso o post não tenha imagem cadastrada
+  const ogImage =
+    post.coverImage || 'https://eleven-website.com/default-og-image.jpg';
 
   return {
     title: `${post.title} | Blog Eleven`,
@@ -30,10 +34,20 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      type: "article",
-      ...(post.coverImage && {
-        images: [{ url: post.coverImage, alt: post.title }],
-      }),
+      type: 'article',
+      images: [
+        {
+          url: ogImage,
+          alt: post.title,
+        },
+      ],
+    },
+    // Adiciona o Twitter Card por garantia de SEO
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
     },
   };
 }

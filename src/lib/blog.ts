@@ -23,6 +23,7 @@ export type BlogPostSummary = {
   category: string;
   readTime: string;
   accentGradient: string;
+  keyTakeaways: string[];
 };
 
 export type BlogPost = BlogPostSummary & {
@@ -304,19 +305,26 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
     title,
     slug,
     excerpt:
-      getStringField(fields, "Excerpt", "excerpt", "Summary", "summary") ??
-      "Conteúdo exclusivo da Eleven Web Development para impulsionar sua presença digital.",
-    author: getStringField(fields, "Author", "author") ?? "Equipe Eleven",
+      getStringField(fields, 'Excerpt', 'excerpt', 'Summary', 'summary') ??
+      'Conteúdo exclusivo da Eleven Web Development para impulsionar sua presença digital.',
+    author: getStringField(fields, 'Author', 'author') ?? 'Equipe Eleven',
     date: formatBlogDate(publishedAt),
     dateISO: publishedAt ?? record.createdTime,
     createdISO: record.createdTime,
     category,
     readTime,
     accentGradient: getGradientForCategory(category),
-    content: parseContent(getField(fields, "Content", "content")),
-    sections: parseSections(getField(fields, "Sections", "sections")),
+    content: parseContent(getField(fields, 'Content', 'content')),
+    sections: parseSections(getField(fields, 'Sections', 'sections')),
+    // Altere para ficar exatamente assim:
     keyTakeaways: parseStringList(
-      getField(fields, "Key Takeaways", "key_takeaways", "KeyTakeaways"),
+      getField(
+        fields,
+        'keyTakeaways',
+        'Key Takeaways',
+        'key_takeaways',
+        'KeyTakeaways',
+      ),
     ),
     highlightedQuote,
     coverImage,
@@ -351,6 +359,7 @@ export async function getBlogPosts(): Promise<BlogPostSummary[]> {
       category: post.category,
       readTime: post.readTime,
       accentGradient: post.accentGradient,
+      keyTakeaways: post.keyTakeaways,
     }));
 }
 

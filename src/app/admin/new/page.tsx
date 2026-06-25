@@ -88,6 +88,7 @@ export default function NewPostPage() {
           title: formData.title,
           permalink: formData.permalink,
           author: formData.author,
+          keyTakeaways: formData.keyTakeaways,
           tags: [formData.category], // Airtable espera o campo Tags como array
           summary: formData.summary,
           content: formData.content,
@@ -97,7 +98,6 @@ export default function NewPostPage() {
           publishdate:
             formData.publishdate || new Date().toISOString().split('T')[0],
           // 🔴 ATUALIZAÇÃO 1: Enviando o campo keyTakeaways para a API do Next.js
-          keyTakeaways: formData.keyTakeaways,
         }),
       });
 
@@ -279,7 +279,7 @@ export default function NewPostPage() {
                 value={formData.featuredimage}
                 onChange={handleChange}
                 placeholder="Ex: https://images.unsplash.com/photo-..."
-                className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-white border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition font-mono text-xs"
+                className="w-full rounded-xl bg-white/5 px-4 py-3 text-white border border-white/10 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition font-mono text-xs"
               />
               <p className="mt-1.5 text-xs text-gray-500">
                 Insira o link de uma imagem pública do Unsplash ou do próprio

@@ -12,6 +12,8 @@ interface AdminPost {
   author: string;
   date: string;
   slug: string;
+  keyTakeaways: string;
+  
 }
 
 interface AdminPostListProps {

@@ -23,15 +23,24 @@ async function getAllBlogPostsForAdmin() {
       const fields = record.fields;
       const title = (fields.Title || fields.title || 'Sem título') as string;
       const status = (fields.Status || fields.status || 'Draft') as string;
-      const category = (fields.Category || fields.category || (fields.Tags && Array.isArray(fields.Tags) && fields.Tags[0]) || 'Desenvolvimento Web') as string;
-      const author = (fields.Author || fields.author || 'Equipe Eleven') as string; // Ainda não está sendo usado
-      const keyTakeaways = (fields.Takeaways ||
-        fields.takeaways ||
+      const category = (fields.Category ||
+        fields.category ||
+        (fields.Tags && Array.isArray(fields.Tags) && fields.Tags[0]) ||
+        'Desenvolvimento Web') as string;
+      const author = (fields.Author ||
+        fields.author ||
+        'Equipe Eleven') as string; // Ainda não está sendo usado
+      const keyTakeaways = (fields.keyTakeaways ||
+        fields['keyTakeaways'] ||
+        fields.Takeaways ||
         '') as string;
 
-      
-      const rawDate = (fields.PublishedAt || fields['Published At'] || fields['Publish Date'] || fields.published_at || fields.publish_date) as string;
-      
+      const rawDate = (fields.PublishedAt ||
+        fields['Published At'] ||
+        fields['Publish Date'] ||
+        fields.published_at ||
+        fields.publish_date) as string;
+
       // Se não tiver data, tenta obter a data de criação ou usa a atual
       let dateObj = new Date();
       if (rawDate) {
@@ -42,14 +51,18 @@ async function getAllBlogPostsForAdmin() {
           dateObj = new Date(recordWithTime.createdTime);
         }
       }
-      
+
       const date = dateObj.toLocaleDateString('pt-BR', {
         day: 'numeric',
         month: 'short',
         year: 'numeric',
       });
 
-      let slug = (fields.Slug || fields.slug || fields.Permalink || fields.permalink || '') as string;
+      let slug = (fields.Slug ||
+        fields.slug ||
+        fields.Permalink ||
+        fields.permalink ||
+        '') as string;
       if (slug && (slug.startsWith('http://') || slug.startsWith('https://'))) {
         try {
           const url = new URL(slug);
@@ -115,7 +128,8 @@ export default async function AdminPage() {
               Painel do Blog
             </h1>
             <p className="mt-2 text-sm text-gray-400">
-              Gerencie as postagens do seu blog de forma simples através do Airtable.
+              Gerencie as postagens do seu blog de forma simples através do
+              Airtable.
             </p>
           </div>
 

@@ -1,18 +1,18 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { formatBlogDate, getBlogPostBySlug } from "@/lib/blog";
-import { parseMarkdown } from "@/lib/utils";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { formatBlogDate, getBlogPostBySlug } from '@/lib/blog';
+import { parseMarkdown } from '@/lib/utils';
 
 type PageParams = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
@@ -24,7 +24,6 @@ export async function generateMetadata({
     return { title: 'Artigo não encontrado' };
   }
 
-  // Define uma imagem padrão do seu site caso o post não tenha imagem cadastrada
   const ogImage =
     post.coverImage || 'https://eleven-website.com/default-og-image.jpg';
 
@@ -42,7 +41,6 @@ export async function generateMetadata({
         },
       ],
     },
-    // Adiciona o Twitter Card por garantia de SEO
     twitter: {
       card: 'summary_large_image',
       title: post.title,
@@ -65,14 +63,17 @@ export default async function BlogPostPage({ params }: PageParams) {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen bg-gradient-to-b from-white via-white to-gray-100 pt-16">
+      <main
+        id="main-content"
+        className="min-h-screen bg-gradient-to-b from-white via-white to-gray-100 pt-16"
+      >
         <article>
           <section className="relative overflow-hidden border-b border-black/5">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-gradient-to-r from-gray-200 via-white to-gray-200 blur-3xl" />
             </div>
 
-            <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 pb-24 pt-20 text-center">
+            <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 pb-12 pt-20 text-center">
               <div className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-gray-500">
                 <span className="rounded-full border border-black/10 px-4 py-1">
                   {post.category}
@@ -111,6 +112,19 @@ export default async function BlogPostPage({ params }: PageParams) {
                 )}
               </div>
             </div>
+
+            {/* 📸 Seção da Imagem de Destaque */}
+            {post.coverImage && (
+              <div className="relative mx-auto max-w-4xl px-4 pb-16">
+                <div className="overflow-hidden rounded-[24px] shadow-2xl border border-gray-200">
+                  <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 hover:scale-[1.02]"
+                  />
+                </div>
+              </div>
+            )}
           </section>
 
           <section className="px-4 py-20">
@@ -123,7 +137,10 @@ export default async function BlogPostPage({ params }: PageParams) {
 
                       if (hasImage) {
                         return (
-                          <div key={`content-${index}`} className="text-gray-700">
+                          <div
+                            key={`content-${index}`}
+                            className="text-gray-700"
+                          >
                             {parseMarkdown(paragraph)}
                           </div>
                         );

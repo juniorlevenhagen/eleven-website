@@ -1,13 +1,13 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Lightbulb, Star, Users, BookOpen } from "lucide-react";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Lightbulb, Star, Users, BookOpen } from 'lucide-react';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: "Sobre a Eleven Web Development | Nossa História",
+  title: 'Sobre a Eleven — Soluções Digitais | Nossa História',
   description:
-    "Conheça a Eleven Web Development, nossa missão de transformar ideias em experiências digitais extraordinárias desde 2020.",
+    'Conheça a Eleven — Soluções Digitais, nossa missão de transformar ideias em experiências digitais extraordinárias desde 2020.',
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 Nossa História
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Fundada em 2019, a Eleven Web Development tem estado na
+                Fundada em 2019, a Eleven — Soluções Digitais tem estado na
                 vanguarda da inovação digital, ajudando empresas a transformar
                 sua presença online e alcançar seus objetivos digitais.
               </p>

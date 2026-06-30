@@ -1,26 +1,26 @@
-import Link from "next/link";
-import Image from "next/image";
-import { ASSETS } from "@/constants/paths";
+import Link from 'next/link';
+import Image from 'next/image';
+import { ASSETS } from '@/constants/paths';
 
 const siteMap = {
-  "Navegação Principal": [
-    { name: "Home", href: "/" },
-    { name: "Serviços", href: "/services" },
-    { name: "Sobre", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contato", href: "/contact" },
+  'Navegação Principal': [
+    { name: 'Home', href: '/' },
+    { name: 'Serviços', href: '/services' },
+    { name: 'Sobre', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contato', href: '/contact' },
   ],
   Informações: [
-    { name: "FAQ", href: "/faq" },
-    { name: "Como Trabalhamos", href: "/process" },
-    { name: "Política de Privacidade", href: "/privacy" },
-    { name: "Termos de Uso", href: "/terms" },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Como Trabalhamos', href: '/process' },
+    { name: 'Política de Privacidade', href: '/privacy' },
+    { name: 'Termos de Uso', href: '/terms' },
   ],
   Serviços: [
-    { name: "Landing Pages", href: "/services#landing" },
-    { name: "Sites Institucionais", href: "/services#institutional" },
-    { name: "E-commerce", href: "/services#ecommerce" },
-    { name: "Manutenção", href: "/services#maintenance" },
+    { name: 'Landing Pages', href: '/services#landing' },
+    { name: 'Sites Institucionais', href: '/services#institutional' },
+    { name: 'E-commerce', href: '/services#ecommerce' },
+    { name: 'Manutenção', href: '/services#maintenance' },
   ],
 };
 
@@ -34,11 +34,11 @@ export const Footer = () => {
             <Link
               href="/"
               className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md"
-              aria-label="Eleven Web Development - Página inicial"
+              aria-label="Eleven — Soluções Digitais - Página inicial"
             >
               <Image
                 src={ASSETS.LOGOS.LIGHT}
-                alt="Eleven Web Development"
+                alt="Eleven — Soluções Digitais"
                 width={120}
                 height={30}
                 className="h-8 w-auto"
@@ -58,10 +58,10 @@ export const Footer = () => {
               key={category}
               aria-labelledby={`footer-${category
                 .toLowerCase()
-                .replace(/\s+/g, "-")}`}
+                .replace(/\s+/g, '-')}`}
             >
               <h3
-                id={`footer-${category.toLowerCase().replace(/\s+/g, "-")}`}
+                id={`footer-${category.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-white font-semibold mb-4"
               >
                 {category}
@@ -85,7 +85,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
           <p>
-            © {new Date().getFullYear()} Eleven Web Development. Todos os
+            © {new Date().getFullYear()} Eleven — Soluções Digitais. Todos os
             direitos reservados.
           </p>
         </div>

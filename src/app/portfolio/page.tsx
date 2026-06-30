@@ -1,31 +1,31 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: "Portfolio de Projetos | Eleven Web Development",
+  title: 'Portfolio de Projetos | Eleven — Soluções Digitais',
   description:
-    "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
+    'Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.',
   keywords: [
-    "portfolio",
-    "projetos web",
-    "cases de sucesso",
-    "sites desenvolvidos",
-    "trabalhos realizados",
-    "exemplos de sites",
+    'portfolio',
+    'projetos web',
+    'cases de sucesso',
+    'sites desenvolvidos',
+    'trabalhos realizados',
+    'exemplos de sites',
   ],
   openGraph: {
-    title: "Portfolio de Projetos | Eleven Web Development",
+    title: 'Portfolio de Projetos | Eleven — Soluções Digitais',
     description:
-      "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
-    url: "https://elevenweb.dev/portfolio",
-    type: "website",
+      'Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.',
+    url: 'https://elevenweb.dev/portfolio',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Portfolio de Projetos | Eleven Web Development",
+    card: 'summary_large_image',
+    title: 'Portfolio de Projetos | Eleven — Soluções Digitais',
     description:
-      "Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.",
+      'Conheça nossos projetos de sucesso em desenvolvimento web. Cases reais de sites que convertem e geram resultados.',
   },
 };
 

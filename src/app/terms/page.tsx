@@ -1,12 +1,12 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: "Termos de Uso | Eleven Web Development",
+  title: 'Termos de Uso | Eleven — Soluções Digitais',
   description:
-    "Termos e condições de uso dos serviços da Eleven Web Development. Conheça nossos compromissos e responsabilidades.",
+    'Termos e condições de uso dos serviços da Eleven — Soluções Digitais. Conheça nossos compromissos e responsabilidades.',
 };
 
 export default function TermsPage() {
@@ -20,7 +20,7 @@ export default function TermsPage() {
               Termos de Uso
             </h1>
             <p className="text-xl text-gray-600">
-              Última atualização: {new Date().toLocaleDateString("pt-BR")}
+              Última atualização: {new Date().toLocaleDateString('pt-BR')}
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export default function TermsPage() {
                 2. Serviços
               </h2>
               <p className="text-gray-600 mb-4">
-                A Eleven Web Development oferece os seguintes serviços:
+                A Eleven — Soluções Digitais oferece os seguintes serviços:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Desenvolvimento de websites</li>

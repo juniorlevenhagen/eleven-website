@@ -1,6 +1,6 @@
 # Melhorias de Acessibilidade Implementadas
 
-Este documento descreve as melhorias de acessibilidade implementadas no site da Eleven Web Development.
+Este documento descreve as melhorias de acessibilidade implementadas no site da Eleven — Soluções Digitais.
 
 ## ✅ Melhorias Implementadas
 

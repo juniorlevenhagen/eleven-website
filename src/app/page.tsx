@@ -9,7 +9,8 @@ import { WhyChooseUs } from '@/components/MyChooseUs';
 
 // 1. CONFIGURAÇÃO DE METADATA (SEO PARA BUSCA E REDES SOCIAIS)
 export const metadata: Metadata = {
-  title: 'Criação de Sites e Ecossistemas Digitais | Eleven Web Development',
+  title:
+    'Criação de Sites e Ecossistemas Digitais | Eleven — Soluções Digitais',
   description:
     'Desenvolvemos sites profissionais de alta performance, landing pages e ecossistemas digitais integrados a CRMs e automações para escalar o faturamento da sua empresa.',
   keywords: [
@@ -18,10 +19,11 @@ export const metadata: Metadata = {
     'empresa de desenvolvimento web',
     'automação de marketing e CRM',
     'agência de desenvolvimento digital',
-    'Eleven Web Development',
+    'Eleven — Soluções Digitais',
   ],
   openGraph: {
-    title: 'Criação de Sites e Ecossistemas Digitais | Eleven Web Development',
+    title:
+      'Criação de Sites e Ecossistemas Digitais | Eleven — Soluções Digitais',
     description:
       'Desenvolvemos sites profissionais de alta performance, landing pages e ecossistemas digitais integrados para escalar o faturamento da sua empresa.',
     url: 'https://elevenweb.dev',
@@ -31,13 +33,14 @@ export const metadata: Metadata = {
         url: 'https://elevenweb.dev/images/logos/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Eleven Web Development - Criação de Sites Profissionais',
+        alt: 'Eleven — Soluções Digitais - Criação de Sites Profissionais',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Criação de Sites e Ecossistemas Digitais | Eleven Web Development',
+    title:
+      'Criação de Sites e Ecossistemas Digitais | Eleven — Soluções Digitais',
     description:
       'Desenvolvemos sites profissionais de alta performance, landing pages e ecossistemas digitais integrados para escalar o faturamento da sua empresa.',
     images: ['https://elevenweb.dev/images/logos/og-image.png'],
@@ -50,7 +53,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Eleven',
-    legalName: 'Eleven Web Development',
+    legalName: 'Eleven — Soluções Digitais',
     image: 'https://elevenweb.dev/images/logos/og-image.png',
     '@id': 'https://elevenweb.dev',
     url: 'https://elevenweb.dev',

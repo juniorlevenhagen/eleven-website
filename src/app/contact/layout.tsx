@@ -1,21 +1,21 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Solicitar Orçamento | Eleven Web Development',
+  title: 'Solicitar Orçamento | Eleven — Soluções Digitais',
   description:
-    'Fale com a Eleven Web Development. Solicite o orçamento para o seu site profissional, landing page ou ecossistema digital. Atendimento focado em conversão e vendas.',
+    'Fale com a Eleven — Soluções Digitais. Solicite o orçamento para o seu site profissional, landing page ou ecossistema digital. Atendimento focado em conversão e vendas.',
   keywords: [
     'solicitar orçamento site',
     'contratar desenvolvimento web',
     'orçamento de landing page',
     'empresa de criação de sites',
     'consultoria web',
-    'Eleven Web Development contact',
+    'Eleven — Soluções Digitais contact',
   ],
   openGraph: {
-    title: 'Solicitar Orçamento | Eleven Web Development',
+    title: 'Solicitar Orçamento | Eleven — Soluções Digitais',
     description:
-      'Fale com a Eleven Web Development. Solicite o orçamento para o seu site profissional, landing page ou ecossistema digital.',
+      'Fale com a Eleven — Soluções Digitais. Solicite o orçamento para o seu site profissional, landing page ou ecossistema digital.',
     url: 'https://elevenweb.dev/contact',
     type: 'website',
     images: [
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
         url: 'https://elevenweb.dev/images/logos/og-image.png', // Crie e coloque essa imagem na sua pasta public
         width: 1200,
         height: 630,
-        alt: 'Eleven Web Development - Solicitar Orçamento',
+        alt: 'Eleven — Soluções Digitais - Solicitar Orçamento',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Solicitar Orçamento | Eleven Web Development',
+    title: 'Solicitar Orçamento | Eleven — Soluções Digitais',
     description:
-      'Solicite o orçamento para o seu site profissional ou ecossistema digital com a Eleven Web Development.',
+      'Solicite o orçamento para o seu site profissional ou ecossistema digital com a Eleven — Soluções Digitais.',
     images: ['https://elevenweb.dev/images/logos/og-image.png'],
   },
 };

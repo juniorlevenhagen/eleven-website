@@ -1,9 +1,9 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Configure seu Projeto | Eleven Web Development",
+  title: 'Configure seu Projeto | Eleven — Soluções Digitais',
   description:
-    "Configure seu projeto ideal selecionando funcionalidades e recursos. Receba um orçamento personalizado para seu site.",
+    'Configure seu projeto ideal selecionando funcionalidades e recursos. Receba um orçamento personalizado para seu site.',
 };
 
 export default function StartLayout({

@@ -1,56 +1,56 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { ChevronDown, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { ChevronDown, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Perguntas Frequentes | Eleven Web Development",
+  title: 'Perguntas Frequentes | Eleven — Soluções Digitais',
   description:
-    "Tire suas dúvidas sobre nossos serviços de desenvolvimento web, prazos, preços, suporte e muito mais.",
+    'Tire suas dúvidas sobre nossos serviços de desenvolvimento web, prazos, preços, suporte e muito mais.',
 };
 
 const faqs = [
   {
-    question: "Como funciona o processo de desenvolvimento?",
+    question: 'Como funciona o processo de desenvolvimento?',
     answer:
       "Nosso processo é dividido em 6 etapas principais: Planejamento, Design, Desenvolvimento, Testes, Lançamento e Suporte. Em cada etapa, mantemos você informado e envolvido, garantindo que o resultado final atenda exatamente às suas expectativas. Você pode conhecer mais detalhes do nosso processo na página 'Como Trabalhamos'.",
   },
   {
-    question: "Quanto tempo leva para desenvolver um site?",
+    question: 'Quanto tempo leva para desenvolver um site?',
     answer:
-      "O tempo de desenvolvimento varia de acordo com o tipo e complexidade do projeto. Em média: Landing Pages (7-10 dias), Sites Institucionais (15-20 dias) e E-commerce (30-45 dias). Estes prazos podem variar dependendo da complexidade do projeto e do tempo de resposta para aprovações.",
+      'O tempo de desenvolvimento varia de acordo com o tipo e complexidade do projeto. Em média: Landing Pages (7-10 dias), Sites Institucionais (15-20 dias) e E-commerce (30-45 dias). Estes prazos podem variar dependendo da complexidade do projeto e do tempo de resposta para aprovações.',
   },
   {
-    question: "Quais são as formas de pagamento?",
+    question: 'Quais são as formas de pagamento?',
     answer:
-      "Aceitamos diversas formas de pagamento: transferência bancária, PIX, cartão de crédito (parcelado em até 12x) e boleto bancário. Para projetos maiores, oferecemos a opção de pagamento em etapas, alinhadas com as fases do desenvolvimento.",
+      'Aceitamos diversas formas de pagamento: transferência bancária, PIX, cartão de crédito (parcelado em até 12x) e boleto bancário. Para projetos maiores, oferecemos a opção de pagamento em etapas, alinhadas com as fases do desenvolvimento.',
   },
   {
-    question: "Vocês oferecem suporte após o lançamento?",
+    question: 'Vocês oferecem suporte após o lançamento?',
     answer:
-      "Sim! Todos os nossos pacotes incluem um período de suporte gratuito após o lançamento. Além disso, oferecemos planos de manutenção mensal que incluem atualizações de segurança, backup automático, monitoramento 24/7 e suporte técnico contínuo.",
+      'Sim! Todos os nossos pacotes incluem um período de suporte gratuito após o lançamento. Além disso, oferecemos planos de manutenção mensal que incluem atualizações de segurança, backup automático, monitoramento 24/7 e suporte técnico contínuo.',
   },
   {
-    question: "Como é feita a atualização do conteúdo?",
+    question: 'Como é feita a atualização do conteúdo?',
     answer:
-      "Oferecemos duas opções: 1) Sistema de gerenciamento de conteúdo (CMS) que permite que você mesmo faça as atualizações de forma simples e intuitiva; 2) Serviço de manutenção mensal, onde nossa equipe faz todas as atualizações necessárias para você.",
+      'Oferecemos duas opções: 1) Sistema de gerenciamento de conteúdo (CMS) que permite que você mesmo faça as atualizações de forma simples e intuitiva; 2) Serviço de manutenção mensal, onde nossa equipe faz todas as atualizações necessárias para você.',
   },
   {
-    question: "Vocês fazem a hospedagem do site?",
+    question: 'Vocês fazem a hospedagem do site?',
     answer:
-      "Sim! Oferecemos serviços de hospedagem com servidores de alta performance, certificado SSL, backup automático e suporte técnico. A hospedagem é opcional, mas recomendamos nossos serviços para garantir o melhor desempenho do seu site.",
+      'Sim! Oferecemos serviços de hospedagem com servidores de alta performance, certificado SSL, backup automático e suporte técnico. A hospedagem é opcional, mas recomendamos nossos serviços para garantir o melhor desempenho do seu site.',
   },
   {
-    question: "O site será responsivo (mobile)?",
+    question: 'O site será responsivo (mobile)?',
     answer:
-      "Sim! Todos os nossos sites são desenvolvidos com design responsivo, garantindo uma experiência perfeita em qualquer dispositivo: computadores, tablets e smartphones. Isso é fundamental para o SEO e para a experiência do usuário.",
+      'Sim! Todos os nossos sites são desenvolvidos com design responsivo, garantindo uma experiência perfeita em qualquer dispositivo: computadores, tablets e smartphones. Isso é fundamental para o SEO e para a experiência do usuário.',
   },
   {
-    question: "Vocês fazem SEO?",
+    question: 'Vocês fazem SEO?',
     answer:
-      "Sim! Oferecemos serviços de SEO básico em todos os pacotes e um serviço de SEO avançado como opção adicional. Isso inclui otimização técnica, de conteúdo, análise de palavras-chave e relatórios de performance.",
+      'Sim! Oferecemos serviços de SEO básico em todos os pacotes e um serviço de SEO avançado como opção adicional. Isso inclui otimização técnica, de conteúdo, análise de palavras-chave e relatórios de performance.',
   },
 ];
 

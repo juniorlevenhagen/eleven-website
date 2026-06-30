@@ -1,6 +1,6 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import {
   ClipboardCheck,
   MessageSquare,
@@ -8,85 +8,85 @@ import {
   Rocket,
   Settings,
   CheckCircle,
-} from "lucide-react";
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Como Trabalhamos | Metodologia Eleven Web Development",
+  title: 'Como Trabalhamos | Metodologia Eleven — Soluções Digitais',
   description:
-    "Conheça nossa metodologia de desenvolvimento web em 6 etapas: planejamento, design, desenvolvimento, testes, lançamento e suporte.",
+    'Conheça nossa metodologia de desenvolvimento web em 6 etapas: planejamento, design, desenvolvimento, testes, lançamento e suporte.',
 };
 
 const processSteps = [
   {
     icon: ClipboardCheck,
-    title: "1. Planejamento",
+    title: '1. Planejamento',
     description:
-      "Entendemos suas necessidades e objetivos para criar a melhor estratégia digital.",
+      'Entendemos suas necessidades e objetivos para criar a melhor estratégia digital.',
     details: [
-      "Análise de requisitos",
-      "Definição de escopo",
-      "Planejamento de funcionalidades",
-      "Cronograma inicial",
+      'Análise de requisitos',
+      'Definição de escopo',
+      'Planejamento de funcionalidades',
+      'Cronograma inicial',
     ],
   },
   {
     icon: MessageSquare,
-    title: "2. Design",
+    title: '2. Design',
     description:
-      "Criamos uma experiência visual única e alinhada com sua marca.",
+      'Criamos uma experiência visual única e alinhada com sua marca.',
     details: [
-      "Wireframes e protótipos",
-      "Design responsivo",
-      "Identidade visual",
-      "Aprovação do cliente",
+      'Wireframes e protótipos',
+      'Design responsivo',
+      'Identidade visual',
+      'Aprovação do cliente',
     ],
   },
   {
     icon: Code,
-    title: "3. Desenvolvimento",
+    title: '3. Desenvolvimento',
     description:
-      "Implementamos todas as funcionalidades com as melhores tecnologias.",
+      'Implementamos todas as funcionalidades com as melhores tecnologias.',
     details: [
-      "Desenvolvimento front-end",
-      "Desenvolvimento back-end",
-      "Integrações necessárias",
-      "Testes contínuos",
+      'Desenvolvimento front-end',
+      'Desenvolvimento back-end',
+      'Integrações necessárias',
+      'Testes contínuos',
     ],
   },
   {
     icon: Settings,
-    title: "4. Testes",
+    title: '4. Testes',
     description:
-      "Garantimos que tudo funcione perfeitamente em todos os dispositivos.",
+      'Garantimos que tudo funcione perfeitamente em todos os dispositivos.',
     details: [
-      "Testes de usabilidade",
-      "Testes de performance",
-      "Testes de segurança",
-      "Correções e ajustes",
+      'Testes de usabilidade',
+      'Testes de performance',
+      'Testes de segurança',
+      'Correções e ajustes',
     ],
   },
   {
     icon: Rocket,
-    title: "5. Lançamento",
+    title: '5. Lançamento',
     description:
-      "Colocamos seu site no ar com toda a infraestrutura necessária.",
+      'Colocamos seu site no ar com toda a infraestrutura necessária.',
     details: [
-      "Configuração de servidor",
-      "Deploy do site",
-      "Configuração de domínio",
-      "Monitoramento inicial",
+      'Configuração de servidor',
+      'Deploy do site',
+      'Configuração de domínio',
+      'Monitoramento inicial',
     ],
   },
   {
     icon: CheckCircle,
-    title: "6. Suporte",
+    title: '6. Suporte',
     description:
-      "Oferecemos suporte contínuo para garantir o melhor funcionamento.",
+      'Oferecemos suporte contínuo para garantir o melhor funcionamento.',
     details: [
-      "Suporte técnico",
-      "Atualizações de segurança",
-      "Backup regular",
-      "Monitoramento 24/7",
+      'Suporte técnico',
+      'Atualizações de segurança',
+      'Backup regular',
+      'Monitoramento 24/7',
     ],
   },
 ];

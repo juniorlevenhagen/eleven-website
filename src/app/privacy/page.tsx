@@ -1,12 +1,12 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade | Eleven Web Development",
+  title: 'Política de Privacidade | Eleven — Soluções Digitais',
   description:
-    "Política de privacidade e proteção de dados da Eleven Web Development. Saiba como protegemos suas informações.",
+    'Política de privacidade e proteção de dados da Eleven — Soluções Digitais. Saiba como protegemos suas informações.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
               Política de Privacidade
             </h1>
             <p className="text-xl text-gray-600">
-              Última atualização: {new Date().toLocaleDateString("pt-BR")}
+              Última atualização: {new Date().toLocaleDateString('pt-BR')}
             </p>
           </div>
 
@@ -30,10 +30,10 @@ export default function PrivacyPolicyPage() {
                 1. Introdução
               </h2>
               <p className="text-gray-600 mb-4">
-                A Eleven Web Development (&ldquo;nós&rdquo;, &ldquo;nosso&rdquo;
-                ou &ldquo;nossa&rdquo;) está comprometida em proteger sua
-                privacidade. Esta Política de Privacidade explica como
-                coletamos, usamos, divulgamos e protegemos suas informações
+                A Eleven — Soluções Digitais (&ldquo;nós&rdquo;,
+                &ldquo;nosso&rdquo; ou &ldquo;nossa&rdquo;) está comprometida em
+                proteger sua privacidade. Esta Política de Privacidade explica
+                como coletamos, usamos, divulgamos e protegemos suas informações
                 quando você utiliza nossos serviços.
               </p>
             </section>

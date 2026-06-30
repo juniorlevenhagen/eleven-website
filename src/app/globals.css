@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -145,7 +145,7 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
 }
 
 /* Loading states */
-[aria-busy="true"] {
+[aria-busy='true'] {
   cursor: wait;
 }
 
@@ -254,4 +254,17 @@ footer nav a:hover {
   background-color: #1d4ed8;
   border-color: #1d4ed8;
   box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.3);
+}
+
+@theme {
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

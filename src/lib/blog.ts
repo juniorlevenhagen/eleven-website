@@ -1,12 +1,12 @@
-import { fetchAirtableRecords, type AirtableRecord } from "@/lib/airtable";
+import { fetchAirtableRecords, type AirtableRecord } from '@/lib/airtable';
 
 export const BLOG_CATEGORIES = [
-  "Todos",
-  "Desenvolvimento Web",
-  "SEO",
-  "Design",
-  "Negócios",
-  "Tecnologia",
+  'Todos',
+  'Desenvolvimento Web',
+  'SEO',
+  'Design',
+  'Negócios',
+  'Tecnologia',
 ] as const;
 
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
@@ -36,71 +36,72 @@ export type BlogPost = BlogPostSummary & {
 };
 
 const gradientMap: Record<string, string> = {
-  "Desenvolvimento Web": "from-blue-400 via-indigo-500 to-purple-600",
-  SEO: "from-emerald-400 via-teal-500 to-cyan-600",
-  Design: "from-violet-400 via-purple-500 to-fuchsia-600",
-  Negócios: "from-orange-300 via-amber-400 to-yellow-500",
-  Tecnologia: "from-rose-400 via-pink-500 to-red-500",
+  'Desenvolvimento Web': 'from-blue-400 via-indigo-500 to-purple-600',
+  SEO: 'from-emerald-400 via-teal-500 to-cyan-600',
+  Design: 'from-violet-400 via-purple-500 to-fuchsia-600',
+  Negócios: 'from-orange-300 via-amber-400 to-yellow-500',
+  Tecnologia: 'from-rose-400 via-pink-500 to-red-500',
 };
 
 const hoverColorsMap: Record<string, string> = {
-  "Desenvolvimento Web":
-    "hover:bg-gradient-to-br hover:from-blue-600 hover:via-indigo-700 hover:to-purple-800",
-  SEO: "hover:bg-gradient-to-br hover:from-emerald-600 hover:via-teal-700 hover:to-cyan-800",
+  'Desenvolvimento Web':
+    'hover:bg-gradient-to-br hover:from-blue-600 hover:via-indigo-700 hover:to-purple-800',
+  SEO: 'hover:bg-gradient-to-br hover:from-emerald-600 hover:via-teal-700 hover:to-cyan-800',
   Design:
-    "hover:bg-gradient-to-br hover:from-violet-600 hover:via-purple-700 hover:to-fuchsia-800",
+    'hover:bg-gradient-to-br hover:from-violet-600 hover:via-purple-700 hover:to-fuchsia-800',
   Negócios:
-    "hover:bg-gradient-to-br hover:from-orange-500 hover:via-amber-600 hover:to-yellow-600",
+    'hover:bg-gradient-to-br hover:from-orange-500 hover:via-amber-600 hover:to-yellow-600',
   Tecnologia:
-    "hover:bg-gradient-to-br hover:from-rose-600 hover:via-pink-700 hover:to-red-700",
+    'hover:bg-gradient-to-br hover:from-rose-600 hover:via-pink-700 hover:to-red-700',
 };
 
 const borderColorsMap: Record<string, string> = {
-  "Desenvolvimento Web": "border-indigo-400",
-  SEO: "border-emerald-400",
-  Design: "border-purple-400",
-  Negócios: "border-amber-400",
-  Tecnologia: "border-rose-400",
+  'Desenvolvimento Web': 'border-indigo-400',
+  SEO: 'border-emerald-400',
+  Design: 'border-purple-400',
+  Negócios: 'border-amber-400',
+  Tecnologia: 'border-rose-400',
 };
 
 const featuredGradientMap: Record<string, string> = {
-  "Desenvolvimento Web": "from-blue-500 via-indigo-600 to-purple-700",
-  SEO: "from-emerald-500 via-teal-600 to-cyan-700",
-  Design: "from-violet-500 via-purple-600 to-fuchsia-700",
-  Negócios: "from-orange-400 via-amber-500 to-yellow-500",
-  Tecnologia: "from-rose-500 via-pink-600 to-red-600",
+  'Desenvolvimento Web': 'from-blue-500 via-indigo-600 to-purple-700',
+  SEO: 'from-emerald-500 via-teal-600 to-cyan-700',
+  Design: 'from-violet-500 via-purple-600 to-fuchsia-700',
+  Negócios: 'from-orange-400 via-amber-500 to-yellow-500',
+  Tecnologia: 'from-rose-500 via-pink-600 to-red-600',
 };
 
 export function getGradientForCategory(category: string | null): string {
   return category && gradientMap[category]
     ? gradientMap[category]
-    : "from-slate-200 via-white to-slate-50";
+    : 'from-slate-200 via-white to-slate-50';
 }
 
 export function getHoverColorForCategory(category: string | null): string {
   return category && hoverColorsMap[category]
     ? hoverColorsMap[category]
-    : "hover:bg-gradient-to-br hover:from-gray-900 hover:via-gray-800 hover:to-black";
+    : 'hover:bg-gradient-to-br hover:from-gray-900 hover:via-gray-800 hover:to-black';
 }
 
 export function getBorderColorForCategory(category: string | null): string {
   return category && borderColorsMap[category]
     ? borderColorsMap[category]
-    : "border-gray-800";
+    : 'border-gray-800';
 }
 
 export function getFeaturedGradient(category: string | null): string {
   return category && featuredGradientMap[category]
     ? featuredGradientMap[category]
-    : "from-blue-500 via-indigo-600 to-purple-700";
+    : 'from-blue-500 via-indigo-600 to-purple-700';
 }
 
-function getField(
-  fields: Record<string, unknown>,
-  ...keys: string[]
-): unknown {
+function getField(fields: Record<string, unknown>, ...keys: string[]): unknown {
   for (const key of keys) {
-    if (fields[key] !== undefined && fields[key] !== null && fields[key] !== "") {
+    if (
+      fields[key] !== undefined &&
+      fields[key] !== null &&
+      fields[key] !== ''
+    ) {
       return fields[key];
     }
   }
@@ -112,11 +113,11 @@ function getStringField(
   ...keys: string[]
 ): string | undefined {
   const value = getField(fields, ...keys);
-  return typeof value === "string" ? value : undefined;
+  return typeof value === 'string' ? value : undefined;
 }
 
 function normalizeCategory(rawCategory?: string): string {
-  if (!rawCategory) return "Conteúdo";
+  if (!rawCategory) return 'Conteúdo';
 
   const trimmed = rawCategory.trim();
   const match = BLOG_CATEGORIES.find(
@@ -127,7 +128,7 @@ function normalizeCategory(rawCategory?: string): string {
 }
 
 function parseJsonField<T>(value: unknown): T | undefined {
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     try {
       return JSON.parse(value) as T;
     } catch {
@@ -140,17 +141,17 @@ function parseJsonField<T>(value: unknown): T | undefined {
 
 function parseStringList(value: unknown): string[] {
   if (Array.isArray(value)) {
-    return value.filter((item): item is string => typeof item === "string");
+    return value.filter((item): item is string => typeof item === 'string');
   }
 
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     const parsed = parseJsonField<string[]>(value);
     if (Array.isArray(parsed)) {
-      return parsed.filter((item): item is string => typeof item === "string");
+      return parsed.filter((item): item is string => typeof item === 'string');
     }
 
     return value
-      .split("\n")
+      .split('\n')
       .map((item) => item.trim())
       .filter(Boolean);
   }
@@ -160,10 +161,10 @@ function parseStringList(value: unknown): string[] {
 
 function parseContent(value: unknown): string[] {
   if (Array.isArray(value)) {
-    return value.filter((item): item is string => typeof item === "string");
+    return value.filter((item): item is string => typeof item === 'string');
   }
 
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     return value
       .split(/\n{2,}/)
       .map((paragraph) => paragraph.trim())
@@ -176,17 +177,14 @@ function parseContent(value: unknown): string[] {
 function parseSections(
   value: unknown,
 ): Array<{ heading?: string; body?: string }> {
-  const parsed = parseJsonField<Array<{ heading?: string; body?: string }>>(
-    value,
-  );
+  const parsed =
+    parseJsonField<Array<{ heading?: string; body?: string }>>(value);
 
   if (Array.isArray(parsed)) {
-    return parsed
-      .filter(Boolean)
-      .map((section) => ({
-        heading: section.heading,
-        body: section.body,
-      }));
+    return parsed.filter(Boolean).map((section) => ({
+      heading: section.heading,
+      body: section.body,
+    }));
   }
 
   return [];
@@ -194,24 +192,24 @@ function parseSections(
 
 export function formatBlogDate(dateString?: string | null): string {
   if (!dateString) {
-    return new Date().toLocaleDateString("pt-BR", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
+    return new Date().toLocaleDateString('pt-BR', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
     });
   }
 
-  return new Date(dateString).toLocaleDateString("pt-BR", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
+  return new Date(dateString).toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
   });
 }
 
 function isPublished(publishedAt?: string, status?: string): boolean {
-  if (status && status !== "Published") return false;
+  if (status && status !== 'Published') return false;
   if (!publishedAt) {
-    return status === "Published" || !status;
+    return status === 'Published' || !status;
   }
   return new Date(publishedAt).getTime() <= Date.now();
 }
@@ -336,7 +334,7 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
     slug,
     excerpt:
       getStringField(fields, 'Excerpt', 'excerpt', 'Summary', 'summary') ??
-      'Conteúdo exclusivo da Eleven Web Development para impulsionar sua presença digital.',
+      'Conteúdo exclusivo da Eleven — Soluções Digitais para impulsionar sua presença digital.',
     author: getStringField(fields, 'Author', 'author') ?? 'Equipe Eleven',
     date: formatBlogDate(publishedAt),
     dateISO: publishedAt ?? record.createdTime,
@@ -363,7 +361,9 @@ function mapRecordToPost(record: AirtableRecord): BlogPost | null {
 }
 
 function getBlogTableName(): string {
-  return process.env.AIRTABLE_BLOG_TABLE || process.env.AIRTABLE_BLOG || "blog_posts";
+  return (
+    process.env.AIRTABLE_BLOG_TABLE || process.env.AIRTABLE_BLOG || 'blog_posts'
+  );
 }
 
 export async function getBlogPosts(): Promise<BlogPostSummary[]> {
@@ -393,7 +393,9 @@ export async function getBlogPosts(): Promise<BlogPostSummary[]> {
     }));
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getBlogPostBySlug(
+  slug: string,
+): Promise<BlogPost | null> {
   // Evita erros de fórmulas caso campos não existam no Airtable buscando os últimos 100 registros e filtrando na memória
   const records = await fetchAirtableRecords(getBlogTableName(), {
     maxRecords: 100,

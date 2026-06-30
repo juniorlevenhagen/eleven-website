@@ -1,18 +1,18 @@
-import { Metadata } from "next";
-import { BlogListing } from "@/components/Blog/BlogListing";
-import { getBlogPosts } from "@/lib/blog";
+import { Metadata } from 'next';
+import { BlogListing } from '@/components/Blog/BlogListing';
+import { getBlogPosts } from '@/lib/blog';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "Blog | Eleven Web Development",
+  title: 'Blog | Eleven — Soluções Digitais',
   description:
-    "Artigos sobre desenvolvimento web, SEO, design, negócios e tecnologia para impulsionar sua presença digital.",
+    'Artigos sobre desenvolvimento web, SEO, design, negócios e tecnologia para impulsionar sua presença digital.',
   openGraph: {
-    title: "Blog | Eleven Web Development",
+    title: 'Blog | Eleven — Soluções Digitais',
     description:
-      "Conteúdos sobre sites profissionais, SEO e estratégia digital.",
-    url: "/blog",
+      'Conteúdos sobre sites profissionais, SEO e estratégia digital.',
+    url: '/blog',
   },
 };
 

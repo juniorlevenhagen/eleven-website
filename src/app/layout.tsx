@@ -12,22 +12,24 @@ export const metadata: Metadata = {
   // 1. Resolve o aviso do Next.js Build definitivamente
   metadataBase: new URL('https://elevenweb.dev'),
 
-  title: 'Eleven Web Development - Criação de Sites Profissionais',
+  title: 'Eleven - Soluções Digitais',
   description:
-    'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
+    'Sites, gestão de mídia paga, redes sociais e implementação de software para empresas que querem crescer no digital.',
   keywords: [
-    'desenvolvimento web',
+    'agência digital',
     'criação de sites',
-    'sites profissionais',
+    'gestão de tráfego pago',
+    'gestão de redes sociais',
+    'implementação de software',
+    'desenvolvimento web',
+    'marketing digital',
     'e-commerce',
     'landing page',
     'SEO',
-    'design responsivo',
-    'programação web',
   ],
-  authors: [{ name: 'Eleven Web Development' }],
-  creator: 'Eleven Web Development',
-  publisher: 'Eleven Web Development',
+  authors: [{ name: 'Eleven — Soluções Digitais' }],
+  creator: 'Eleven — Soluções Digitais',
+  publisher: 'Eleven — Soluções Digitais',
   robots: {
     index: true,
     follow: true,
@@ -43,25 +45,25 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://elevenweb.dev',
-    siteName: 'Eleven Web Development',
-    title: 'Eleven Web Development - Criação de Sites Profissionais',
+    siteName: 'Eleven - Soluções Digitais',
+    title: 'Eleven — Soluções Digitais',
     description:
-      'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
+      'Sites, gestão de mídia paga, redes sociais e implementação de software para empresas que querem crescer no digital.',
     images: [
       {
         // 2. Ajustado para usar a og-image.png que você salvou na public
         url: '/images/logos/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Eleven Web Development - Criação de Sites Profissionais',
+        alt: 'Eleven — Soluções Digitais',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Eleven Web Development - Criação de Sites Profissionais',
+    title: 'Eleven — Soluções Digitais',
     description:
-      'Desenvolvimento web profissional com foco em performance, design moderno e resultados reais para o seu negócio.',
+      'Sites, gestão de mídia paga, redes sociais e implementação de software para empresas que querem crescer no digital.',
     // 3. Ajustado aqui também para a og-image.png
     images: ['/images/logos/og-image.png'],
   },

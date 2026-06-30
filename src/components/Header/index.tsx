@@ -1,10 +1,10 @@
 // src/components/Header/Header.tsx
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ASSETS } from "@/constants/paths";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ASSETS } from '@/constants/paths';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export const Header = () => {
             <Link href="/" className="flex items-center">
               <Image
                 src={ASSETS.LOGOS.DARK}
-                alt="Eleven Web Development"
+                alt="Eleven — Soluções Digitais"
                 width={120}
                 height={30}
                 priority

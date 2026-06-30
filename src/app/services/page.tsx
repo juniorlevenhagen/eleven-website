@@ -1,6 +1,6 @@
-import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import {
   Rocket,
   ShoppingCart,
@@ -8,84 +8,84 @@ import {
   ArrowRight,
   Building,
   Search,
-} from "lucide-react";
-import Link from "next/link";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+} from 'lucide-react';
+import Link from 'next/link';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: "Serviços de Desenvolvimento Web | Eleven Web Development",
+  title: 'Serviços de Desenvolvimento Web | Eleven — Soluções Digitais',
   description:
-    "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
+    'Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.',
   keywords: [
-    "desenvolvimento web",
-    "sites institucionais",
-    "e-commerce",
-    "landing page",
-    "manutenção de sites",
-    "pacotes de desenvolvimento",
-    "sites profissionais",
+    'desenvolvimento web',
+    'sites institucionais',
+    'e-commerce',
+    'landing page',
+    'manutenção de sites',
+    'pacotes de desenvolvimento',
+    'sites profissionais',
   ],
   openGraph: {
-    title: "Serviços de Desenvolvimento Web | Eleven Web Development",
+    title: 'Serviços de Desenvolvimento Web | Eleven — Soluções Digitais',
     description:
-      "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
-    url: "https://elevenweb.dev/services",
-    type: "website",
+      'Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.',
+    url: 'https://elevenweb.dev/services',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Serviços de Desenvolvimento Web | Eleven Web Development",
+    card: 'summary_large_image',
+    title: 'Serviços de Desenvolvimento Web | Eleven — Soluções Digitais',
     description:
-      "Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.",
+      'Oferecemos desenvolvimento de sites institucionais, e-commerce, landing pages e manutenção. Soluções completas para seu negócio digital.',
   },
 };
 
 const packages = [
   {
-    name: "Pacote Básico",
-    price: "A partir de R$ 800",
-    description: "Ideal para pequenos negócios que estão começando",
+    name: 'Pacote Básico',
+    price: 'A partir de R$ 800',
+    description: 'Ideal para pequenos negócios que estão começando',
     icon: Rocket,
     features: [
-      "Design responsivo",
-      "Até 5 páginas",
-      "Formulário de contato",
-      "SEO básico",
-      "Integração com Google Analytics",
-      "Certificado SSL",
-      "Suporte por 3 meses",
+      'Design responsivo',
+      'Até 5 páginas',
+      'Formulário de contato',
+      'SEO básico',
+      'Integração com Google Analytics',
+      'Certificado SSL',
+      'Suporte por 3 meses',
     ],
     recommended: false,
   },
   {
-    name: "Pacote Intermediário",
-    price: "A partir de R$ 1.500",
-    description: "Perfeito para empresas em crescimento",
+    name: 'Pacote Intermediário',
+    price: 'A partir de R$ 1.500',
+    description: 'Perfeito para empresas em crescimento',
     icon: Building,
     features: [
-      "Tudo do Pacote Básico",
-      "Até 10 páginas",
-      "Blog integrado",
-      "SEO avançado",
-      "Área administrativa",
-      "Integração com WhatsApp",
-      "Suporte por 6 meses",
+      'Tudo do Pacote Básico',
+      'Até 10 páginas',
+      'Blog integrado',
+      'SEO avançado',
+      'Área administrativa',
+      'Integração com WhatsApp',
+      'Suporte por 6 meses',
     ],
     recommended: true,
   },
   {
-    name: "Pacote Premium",
-    price: "Sob consulta",
-    description: "Solução completa para seu negócio",
+    name: 'Pacote Premium',
+    price: 'Sob consulta',
+    description: 'Solução completa para seu negócio',
     icon: ShoppingCart,
     features: [
-      "Tudo do Pacote Intermediário",
-      "E-commerce completo",
-      "Sistema de pagamento",
-      "Painel de gestão",
-      "Multi-idiomas",
-      "API personalizada",
-      "Suporte por 1 ano",
+      'Tudo do Pacote Intermediário',
+      'E-commerce completo',
+      'Sistema de pagamento',
+      'Painel de gestão',
+      'Multi-idiomas',
+      'API personalizada',
+      'Suporte por 1 ano',
     ],
     recommended: false,
   },
@@ -93,31 +93,31 @@ const packages = [
 
 const additionalServices = [
   {
-    name: "Manutenção Mensal",
-    price: "R$ 150/mês",
-    description: "Mantenha seu site sempre atualizado e seguro",
+    name: 'Manutenção Mensal',
+    price: 'R$ 150/mês',
+    description: 'Mantenha seu site sempre atualizado e seguro',
     icon: Wrench,
     features: [
-      "Atualizações de segurança",
-      "Backup automático",
-      "Monitoramento 24/7",
-      "Correção de bugs",
-      "Suporte técnico",
-      "Relatórios mensais",
+      'Atualizações de segurança',
+      'Backup automático',
+      'Monitoramento 24/7',
+      'Correção de bugs',
+      'Suporte técnico',
+      'Relatórios mensais',
     ],
   },
   {
-    name: "SEO Avançado",
-    price: "R$ 200/mês",
-    description: "Melhore seu posicionamento nos buscadores",
+    name: 'SEO Avançado',
+    price: 'R$ 200/mês',
+    description: 'Melhore seu posicionamento nos buscadores',
     icon: Search,
     features: [
-      "Análise de palavras-chave",
-      "Otimização de conteúdo",
-      "Link building",
-      "Relatórios de performance",
-      "Ajustes técnicos",
-      "Consultoria mensal",
+      'Análise de palavras-chave',
+      'Otimização de conteúdo',
+      'Link building',
+      'Relatórios de performance',
+      'Ajustes técnicos',
+      'Consultoria mensal',
     ],
   },
 ];
@@ -144,8 +144,8 @@ export default function ServicesPage() {
                 key={index}
                 className={`bg-white/80 backdrop-blur-sm p-8 rounded-xl border ${
                   pkg.recommended
-                    ? "border-blue-500 shadow-lg"
-                    : "border-gray-200"
+                    ? 'border-blue-500 shadow-lg'
+                    : 'border-gray-200'
                 } flex flex-col h-full relative`}
               >
                 {pkg.recommended && (

@@ -17,10 +17,10 @@ const siteMap = {
     { name: 'Termos de Uso', href: '/terms' },
   ],
   Serviços: [
-    { name: 'Landing Pages', href: '/services#landing' },
-    { name: 'Sites Institucionais', href: '/services#institutional' },
-    { name: 'E-commerce', href: '/services#ecommerce' },
-    { name: 'Manutenção', href: '/services#maintenance' },
+    { name: 'CRM & Automações', href: '/services#crm' },
+    { name: 'Sites & Landing Pages', href: '/services#sites' },
+    { name: 'Apps & Sistemas', href: '/services#apps' },
+    { name: 'Marketing Digital', href: '/services#marketing' },
   ],
 };
 

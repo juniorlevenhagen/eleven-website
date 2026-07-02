@@ -18,9 +18,9 @@ const faqs = [
       "Nosso processo é dividido em 6 etapas principais: Planejamento, Design, Desenvolvimento, Testes, Lançamento e Suporte. Em cada etapa, mantemos você informado e envolvido, garantindo que o resultado final atenda exatamente às suas expectativas. Você pode conhecer mais detalhes do nosso processo na página 'Como Trabalhamos'.",
   },
   {
-    question: 'Quanto tempo leva para desenvolver um site?',
+    question: 'Quanto tempo leva para desenvolver um projeto?',
     answer:
-      'O tempo de desenvolvimento varia de acordo com o tipo e complexidade do projeto. Em média: Landing Pages (7-10 dias), Sites Institucionais (15-20 dias) e E-commerce (30-45 dias). Estes prazos podem variar dependendo da complexidade do projeto e do tempo de resposta para aprovações.',
+      'O tempo de desenvolvimento varia de acordo com o escopo da solução. Landing Pages e sites corporativos costumam levar de 10 a 20 dias. Configurações de CRM e automações levam de 15 a 30 dias. Já sistemas Web/SaaS e aplicativos sob medida levam a partir de 45 dias. Estruturamos todo o cronograma em entregas planejadas.',
   },
   {
     question: 'Quais são as formas de pagamento?',
@@ -30,27 +30,27 @@ const faqs = [
   {
     question: 'Vocês oferecem suporte após o lançamento?',
     answer:
-      'Sim! Todos os nossos pacotes incluem um período de suporte gratuito após o lançamento. Além disso, oferecemos planos de manutenção mensal que incluem atualizações de segurança, backup automático, monitoramento 24/7 e suporte técnico contínuo.',
+      'Sim! Todos os nossos projetos sob demanda incluem um período de garantia e suporte gratuito após o lançamento. Além disso, oferecemos planos de evolução e manutenção contínua, ideais para manter softwares, CRMs e campanhas sempre atualizados.',
   },
   {
     question: 'Como é feita a atualização do conteúdo?',
     answer:
-      'Oferecemos duas opções: 1) Sistema de gerenciamento de conteúdo (CMS) que permite que você mesmo faça as atualizações de forma simples e intuitiva; 2) Serviço de manutenção mensal, onde nossa equipe faz todas as atualizações necessárias para você.',
+      'Oferecemos duas opções: 1) Integração com sistemas de gerenciamento de conteúdo (CMS) amigáveis, onde você mesmo faz as atualizações de forma simples; 2) Suporte contínuo através de nossos planos de manutenção mensal.',
   },
   {
     question: 'Vocês fazem a hospedagem do site?',
     answer:
-      'Sim! Oferecemos serviços de hospedagem com servidores de alta performance, certificado SSL, backup automático e suporte técnico. A hospedagem é opcional, mas recomendamos nossos serviços para garantir o melhor desempenho do seu site.',
+      'Sim! Auxiliamos na escolha e configuração da melhor infraestrutura cloud (como AWS, Vercel, Supabase ou Hostinger) para hospedar seu site ou aplicativo com segurança, velocidade e alta disponibilidade.',
   },
   {
     question: 'O site será responsivo (mobile)?',
     answer:
-      'Sim! Todos os nossos sites são desenvolvidos com design responsivo, garantindo uma experiência perfeita em qualquer dispositivo: computadores, tablets e smartphones. Isso é fundamental para o SEO e para a experiência do usuário.',
+      'Sim! Todos os nossos projetos de sites e sistemas web são desenvolvidos com design responsivo, garantindo uma experiência impecável em computadores, tablets e celulares.',
   },
   {
-    question: 'Vocês fazem SEO?',
+    question: 'Vocês fazem SEO e Tráfego Pago?',
     answer:
-      'Sim! Oferecemos serviços de SEO básico em todos os pacotes e um serviço de SEO avançado como opção adicional. Isso inclui otimização técnica, de conteúdo, análise de palavras-chave e relatórios de performance.',
+      'Sim! Nossos sites e landing pages são desenvolvidos com as melhores práticas de SEO técnico. Além disso, temos uma frente dedicada de Marketing Digital & Growth, focada em gestão de campanhas de tráfego pago (Google Ads, Meta Ads) e SEO estratégico mensal para atração de leads.',
   },
 ];
 
